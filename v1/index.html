@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NeMo — Vedeževanje & duhovno branje | Aurelija, 35 let izkušenj</title>
+<meta name="description" content="Neskončne Možnosti — intuitivno dušno in energijsko branje po telefonu, Skypu ali osebno. Tarot in ciganske karte, nihalo, razlaga sanj. Pokličite 090 68 69. 35 let izkušenj, popolna diskretnost.">
+<link rel="canonical" href="https://www.nemo.si/">
+
+<!-- Open Graph (Facebook: Neskončne Možnosti) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sl_SI">
+<meta property="og:site_name" content="NeMo — Neskončne Možnosti">
+<meta property="og:title" content="NeMo — Vedeževanje & duhovno branje | Aurelija">
+<meta property="og:description" content="Intuitivno dušno in energijsko branje po telefonu, Skypu ali osebno. 35 let izkušenj, popolna diskretnost. Pokličite 090 68 69.">
+<meta property="og:url" content="https://www.nemo.si/">
+<meta property="og:image" content="https://www.nemo.si/img/aurelija-og.jpg">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔮</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- =====================================================================
+     GOOGLE TAG MANAGER  (loads GA4; fires only after cookie consent — see JS)
+     TODO: replace GTM-XXXXXXX with the real container ID before going live.
+     ===================================================================== -->
+<script>
+  // Consent Mode v2 default: deny until the user accepts the banner (GDPR/EU).
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+<!-- GTM container loader (only injected once consent is granted, see initAnalytics()) -->
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "NeMo — Neskončne Možnosti",
+  "image": "https://www.nemo.si/img/aurelija-og.jpg",
+  "description": "Intuitivno dušno in energijsko branje, vedeževanje s tarot in ciganskimi kartami, nihalo, razlaga sanj. Po telefonu, Skypu ali osebno.",
+  "telephone": "+38690686900",
+  "priceRange": "€€",
+  "founder": { "@type": "Person", "name": "Aurelija", "jobTitle": "Duhovna poročevalka — svetovalka za osebni razvoj" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gabrovlje 9",
+    "postalCode": "3210",
+    "addressLocality": "Slovenske Konjice",
+    "addressCountry": "SI"
+  },
+  "sameAs": [ "https://www.facebook.com/neskoncnemoznosti/" ],
+  "email": "info@nemo.si"
+}
+</script>
+</head>
+<body>
+
+<!-- =====================================================================
+     STATUS — manual control for now.
+     To mark Aurelija as BUSY: change   data-available="true"
+     on <body> below to  data-available="false"  and re-publish.
+     (toggleStatus() in the script is the future automation hook.)
+     ===================================================================== -->
+<script>document.body.setAttribute('data-available','true');</script>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Ne<span>Mo</span><small>Neskončne Možnosti</small></a>
+  <ul class="nav-links">
+    <li><a href="#o-meni">O meni</a></li>
+    <li><a href="#storitve">Storitve</a></li>
+    <li><a href="#kako-deluje">Kako deluje</a></li>
+    <li><a href="#priprava">Vprašanja</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+    <li><a href="tel:0906869" class="nav-cta" data-call="090 68 69">📞 090 68 69</a></li>
+  </ul>
+</nav>
+
+<!-- STICKY STATUS / CALL BAR -->
+<div class="status-bar">
+  <div class="status-indicator">
+    <div class="status-dot" id="statusDot"></div>
+    <div class="status-label" id="statusLabel">
+      <strong style="color:var(--green)">Aurelija je zdaj dosegljiva</strong>
+      <small>Pokličite takoj — linija je prosta</small>
+    </div>
+  </div>
+  <a href="tel:0906869" class="status-call-btn" id="statusBtn" data-call="090 68 69">📞 Pokliči 090 68 69</a>
+</div>
+
+<!-- ======================== HERO (compact) ======================== -->
+<section id="hero">
+  <div class="hero-cosmos"></div>
+  <div class="hero-stars"></div>
+  <div class="hero-orbit"><span class="orbit-dot"></span></div>
+
+  <div class="hero-content">
+    <div class="hero-copy">
+      <span class="eyebrow" style="color:var(--gold-light)">Neskončne Možnosti · Vedeževanje · Duhovno branje</span>
+      <h1>Intuitivno <em>dušno branje</em> za vaš mir</h1>
+      <p class="hero-subtitle">Jasnovidka Aurelija — 35 let izkušenj, 20 let zaupanja strank. Branje po telefonu, Skypu ali osebno.</p>
+      <p class="hero-experience">Tarot in ciganske karte · Nihalo · Energijsko branje · Razlaga sanj · Popolna diskretnost</p>
+    </div>
+
+    <!-- CONVERSION PANEL — above the fold -->
+    <aside class="hero-panel" aria-label="Pokličite zdaj">
+      <div class="panel-status">
+        <span class="status-dot"></span>
+        <span class="panel-status-text">Aurelija je zdaj dosegljiva
+          <small>Linija je prosta — pokličite takoj</small>
+        </span>
+      </div>
+
+      <div class="panel-line">
+        <a href="tel:0906869" class="panel-line-num" data-call="090 68 69">090 68 69</a>
+        <span class="panel-line-price">1,69 € / min</span>
+      </div>
+      <div class="panel-line">
+        <a href="tel:0907077" class="panel-line-num" data-call="090 70 77">090 70 77</a>
+        <span class="panel-line-price">2,19 € / min</span>
+      </div>
+
+      <a href="tel:0906869" class="panel-cta" data-call="090 68 69">📞 Pokličite zdaj</a>
+      <p class="panel-note">Telekom cenik · Brez čakanja · Dolžina ni omejena</p>
+    </aside>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div id="trust-bar">
+  <div class="container">
+    <div class="trust-items">
+      <div><span class="trust-num">35</span><span class="trust-desc">Let izkušenj z branjem</span></div>
+      <div><span class="trust-num">20</span><span class="trust-desc">Let dela za stranke</span></div>
+      <div><span class="trust-num">100%</span><span class="trust-desc">Diskretnost zagotovljena</span></div>
+      <div><span class="trust-num">3</span><span class="trust-desc">Načini branja: tel · Skype · osebno</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- AVAILABILITY -->
+<section id="dosegljivost">
+  <div class="container">
+    <div class="availability-box">
+      <span class="eyebrow">Trenutna razpoložljivost</span>
+      <h2>Ali je Aurelija zdaj dosegljiva?</h2>
+      <p>Pokličite, ko je status zelen — linija je takoj aktivna, brez čakanja.</p>
+
+      <div class="big-status">
+        <div class="big-dot" id="bigDot"></div>
+        <div class="big-status-text" id="bigStatusText">Da — linija je prosta</div>
+      </div>
+
+      <a href="tel:0906869" class="big-call-btn" id="bigCallBtn" data-call="090 68 69">Pokličite zdaj: 090 68 69</a>
+
+      <!-- When BUSY this block is shown by JS. TODO: wire to form handler (Formspree/Web3Forms). -->
+      <div class="notify-form" id="notifyForm" style="display:none;">
+        <p>Pustite e-naslov — obvestimo vas, ko bo Aurelija spet prosta:</p>
+        <form class="notify-form-row" onsubmit="return false;" data-form="notify">
+          <input type="email" placeholder="vaš@email.si" aria-label="E-poštni naslov" required>
+          <button type="submit">Obvestite me</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O MENI -->
+<section id="o-meni">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <div class="about-photo">Fotografija Aurelije</div>
+        <div class="about-gold-accent"></div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">O jasnovidki</span>
+        <h2>Menim, da sem <em>služabnica duha</em></h2>
+        <div class="divider"></div>
+        <p>Moje ime je <strong>Aurelija</strong> in vesela sem, da ste obiskali mojo spletno stran. Iz kart berem že <strong>35 let</strong>, od tega 20 let za ljudi, ki name naletijo ali mi zaupajo.</p>
+        <p>Osnovno področje dela je <strong>branje preko telefonske linije</strong> in <strong>živa branja</strong> v obliki Skypa ter po potrebi <strong>osebnega obiska</strong>. Pri telefonskih storitvah je moja koncentracija osredotočena na vašo energijo, kjerkoli se nahajate. Tukaj sem za svoje stranke, da jim dam najboljše možne storitve po zmernih cenah.</p>
+
+        <div class="quote-block">
+          "Oziranje v preteklost ima smisel le tedaj, če služi prihodnosti."
+          <cite>— Konrad Adenauer</cite>
+        </div>
+
+        <p>Splošni izraz, ki mi je najbolj domač, je <strong>Duhovna poročevalka — svetovalka za osebni razvoj</strong>. Ni na meni, da vam povem, kaj storiti. Vaša prihodnost se spreminja vsak dan na podlagi vaših odločitev. Moje delo vam pomaga <strong>razumeti, kdo ste in česa ste sposobni.</strong></p>
+        <p style="font-size:13px; color:var(--text-light);">Vsa branja izvajam v prostorih, kjer ni drugih ljudi niti naprav za prisluhe — <strong>popolna diskretnost je zagotovljena.</strong></p>
+
+        <details class="philosophy">
+          <summary>Preberite celotno filozofijo</summary>
+          <div style="padding-top:16px;">
+            <p>Človek ima rad definicijo — tu se počuti varno. A umu daje le vtis, da nam ni treba skrbeti za neskončne možnosti, ko se srečamo z novim izzivom, presenečenjem ali novo osebo. <strong>Duhovnost</strong> mnogi prepoznavajo kot »vedeževanje« ali bližnjico do učenja o svoji bodočnosti. V resnici je to bolj vključujoč izraz: vsi smo psihični-duhovni. <em>Psychic</em> pomeni sposobnost dojemanja informacij, ki so zunaj naših fizičnih čutov.</p>
+            <p><strong>Medij</strong> po svoji definiciji pomeni »biti med« — omogočiti, da se informacija sprejme. Tako kot radio ali televizija nista vir glasbe, ampak medij, ki nam po signalu omogoči, da jo slišimo. Tudi človek je lahko kanal, skozi katerega prehajajo informacije.</p>
+            <p>Sem prinašam sporočila iz <strong>Duhovne dimenzije</strong>, ki imajo lahko za različne ljudi različne pomene. Menim, da sem <strong>služabnica duha</strong>. Vsi smo predniki drug drugega — ne glede na zemeljsko identiteto, družbeni položaj ali poreklo smo duhovi, ki imajo človeško izkušnjo, in smo izraz »Najvišjega«.</p>
+            <p>Svoj del sveta čutim tukaj, v slikoviti Dravinjski dolini, kjer je leta preživela spiritualistka in teozofinja <strong>Adelma Von Vay</strong> — delec povezljivosti pa sega vse do vzhoda, Afrike in antične Veleje na jugu Italije, kjer se je rodil Parmenid.</p>
+          </div>
+        </details>
+
+        <a href="#kontakt" class="btn-outline" style="margin-top:28px;">Pišite mi</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORITVE -->
+<section id="storitve">
+  <div class="container">
+    <div class="services-header">
+      <span class="eyebrow">Kaj ponujam</span>
+      <h2>Storitve in cenik</h2>
+      <div class="divider center"></div>
+      <p>Vedeževanje in prognoza za posameznika s kartomaniko ciganskih ali tarot kart. Nihalo, branje energijskega polja, Knjiga premen in razlaga sanj — pristop prilagodim vašim potrebam.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🔮</span>
+        <h3>Telefonsko branje</h3>
+        <p>Intuitivno dušno in energijsko branje po plačljivi telefonski liniji. Brez čakanja, dolžina ni omejena. Tarot, ciganske karte, nihalo, energijsko polje.</p>
+        <div class="service-price">1,69 € / min</div>
+        <span class="service-price-note">Linija 090 68 69 · Telekom cenik</span>
+        <div class="service-price">2,19 € / min</div>
+        <span class="service-price-note">Linija 090 70 77 · Telekom cenik</span>
+        <a href="tel:0906869" class="btn-primary" style="margin-top:8px;" data-call="090 68 69">📞 Pokličite zdaj</a>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">⏳</span>
+        <h3>Časovni zakup minut</h3>
+        <p>Dušno in energijsko branje v vnaprej zakupljenem trajanju, po telefonu ali Skypu — s popustom. Vnaprej dogovorjena branja se izvršijo v povprečju v 3–4 delovnih dneh.</p>
+        <div class="service-price">1,30 € / min</div>
+        <span class="service-price-note">+ DDV · Dogovor na 031 737 036</span>
+        <a href="#kontakt" class="btn-outline" style="margin-top:8px;">Dogovorite termin</a>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">👁️</span>
+        <h3>Živo branje</h3>
+        <p>Osebni obisk ali Skype. Rezervacija v roku 1–3 dni po plačilu. Ob naročilu dodajte e-poštni naslov in/ali telefon za potrditev termina in morebitne informacije.</p>
+        <div class="service-price">Po dogovoru</div>
+        <span class="service-price-note">Pišite za cenik in termin</span>
+        <a href="#kontakt" class="btn-outline" style="margin-top:8px;">Rezervirajte termin</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KAKO DELUJE -->
+<section id="kako-deluje">
+  <div class="container">
+    <div class="how-header">
+      <span class="eyebrow">Postopek</span>
+      <h2>Kako poteka branje?</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num-wrap"><span class="step-num">1</span></div>
+        <h3>Preverite status</h3>
+        <p>Zgoraj preverite, ali je Aurelija dosegljiva. Ko je zeleno — pokličite takoj.</p>
+      </div>
+      <div class="step">
+        <div class="step-num-wrap"><span class="step-num">2</span></div>
+        <h3>Pokličete</h3>
+        <p>Pokličite 090 68 69 ali 090 70 77. Linija je takoj aktivna, brez čakanja.</p>
+      </div>
+      <div class="step">
+        <div class="step-num-wrap"><span class="step-num">3</span></div>
+        <h3>Odprt um</h3>
+        <p>Opustite pričakovanja in vstopite z odprtim umom. Branje je interaktivno in prilagojeno vam.</p>
+      </div>
+      <div class="step">
+        <div class="step-num-wrap"><span class="step-num">4</span></div>
+        <h3>Zapiski</h3>
+        <p>Priporočam, da si delate zapiske — informacija se včasih razjasni šele čez čas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="priprava">
+  <div class="container">
+    <div class="faq-header">
+      <span class="eyebrow">Pred klicem</span>
+      <h2>Pogosta vprašanja</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Kaj je dušno branje?</h3>
+        <p>Dušno branje ni isto kot vedeževanje. Odčitek združuje vprašanja iz vaše preteklosti, sedanjosti in prihodnosti, da vam je v najboljšo pomoč na življenjski poti.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Kako se pripravim?</h3>
+        <p>Opustite vsa pričakovanja in vstopite z odprtim umom. Če ste osredotočeni le na to, da bi slišali nekaj točno določenega, lahko zgrešite dragoceno informacijo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Ali je branje diskretno?</h3>
+        <p>Branje izvajam v prostorih brez drugih ljudi in brez naprav za prisluhe. Zavedam se, da sta za to delo nujna popolno zaupanje in diskretnost.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Katere tehnike uporabljate?</h3>
+        <p>Ciganske karte, Tarot, nihalo, branje energijskega polja, Knjiga premen in razlaga sanj. Pristop prilagodim vašim potrebam.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Ali mi boste določili usodo?</h3>
+        <p>Ni na meni, da vam povem, kaj storiti. Prihodnost se spreminja na podlagi vaših odločitev. Moje delo vam pomaga razumeti, kdo ste.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Koliko traja branje in koliko stane?</h3>
+        <p>Dolžina ni omejena in je odvisna od vaših potreb. Telefonsko branje: 1,69 €/min (090 68 69) ali 2,19 €/min (090 70 77) po Telekomovem ceniku.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="container">
+    <div class="blog-header">
+      <div>
+        <span class="eyebrow">Znanje in razmišljanja</span>
+        <h2>Iz bloga</h2>
+      </div>
+      <a href="https://www.nemo.si/blog/" class="btn-outline" style="font-size:12px; padding:10px 20px;">Vsi prispevki</a>
+    </div>
+    <div class="blog-grid">
+      <a href="https://www.nemo.si/blog/" class="blog-card">
+        <div class="blog-img">🔮</div>
+        <div class="blog-body">
+          <span class="blog-cat">Vedeževanje</span>
+          <h3>Zakaj kličemo vedeževanje?</h3>
+          <p>Razlogi, zakaj se ljudje odločijo za duhovno svetovanje in kaj lahko pričakujejo …</p>
+        </div>
+      </a>
+      <a href="https://www.nemo.si/blog/" class="blog-card">
+        <div class="blog-img">🃏</div>
+        <div class="blog-body">
+          <span class="blog-cat">Tarot</span>
+          <h3>Ciganske karte in delo z njimi</h3>
+          <p>Ciganske karte imajo bogato zgodovino in posebno simboliko. Spoznajte njihov pomen …</p>
+        </div>
+      </a>
+      <a href="https://www.nemo.si/blog/" class="blog-card">
+        <div class="blog-img">🌙</div>
+        <div class="blog-body">
+          <span class="blog-cat">Jasnovidnost</span>
+          <h3>Kdo je jasnovidka / jasnovidec?</h3>
+          <p>Razlika med vedeževalcem, medijem in jasnovidcem — kaj zmore vsak od njih …</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="hero-stars"></div>
+  <div class="container">
+    <div class="kontakt-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Stopite v stik</span>
+        <h2>Kontakt</h2>
+        <div class="divider"></div>
+
+        <div class="contact-detail">
+          <div class="contact-label">Telefonska linija (takojšen klic)</div>
+          <div class="contact-value">
+            <a href="tel:0906869" data-call="090 68 69">090 68 69</a> &nbsp;·&nbsp;
+            <a href="tel:0907077" data-call="090 70 77">090 70 77</a>
+          </div>
+          <div class="contact-sub">1,69 € / min &nbsp;·&nbsp; 2,19 € / min · Telekom cenik</div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-label">Zakup minut / dogovor</div>
+          <div class="contact-value"><a href="tel:031737036" data-call="031 737 036">031 737 036</a></div>
+          <div class="contact-sub">1,30 € / min + DDV · po dogovoru</div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-label">E-pošta</div>
+          <div class="contact-value"><a href="mailto:info@nemo.si">info@nemo.si</a></div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-label">Facebook</div>
+          <div class="contact-value"><a href="https://www.facebook.com/neskoncnemoznosti/" target="_blank" rel="noopener">Neskončne Možnosti</a></div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-label">Naslov</div>
+          <div class="contact-value" style="font-size:18px; line-height:1.5;">Gabrovlje 9<br>3210 Slovenske Konjice</div>
+        </div>
+      </div>
+
+      <div class="contact-form-side">
+        <h3>Pošljite sporočilo</h3>
+        <!-- TODO: wire to form handler (Formspree/Web3Forms → info@nemo.si). Inert for now. -->
+        <form onsubmit="return false;" data-form="contact">
+          <div class="form-group">
+            <label for="c-ime">Ime *</label>
+            <input id="c-ime" type="text" placeholder="Vaše ime" required>
+          </div>
+          <div class="form-group">
+            <label for="c-email">E-poštni naslov *</label>
+            <input id="c-email" type="email" placeholder="vaš@email.si" required>
+          </div>
+          <div class="form-group">
+            <label for="c-zadeva">Zadeva</label>
+            <input id="c-zadeva" type="text" placeholder="Tema vašega sporočila">
+          </div>
+          <div class="form-group">
+            <label for="c-sporocilo">Sporočilo</label>
+            <textarea id="c-sporocilo" placeholder="Vaše sporočilo …"></textarea>
+          </div>
+          <button class="btn-gold" type="submit" style="width:100%; text-align:center; border:none; padding:15px;">Pošlji sporočilo</button>
+        </form>
+        <p class="newsletter-link"><a href="https://www.nemo.si/kontakt/novicke/">Naročite se na novičke</a> — kratke, vzpodbudne misli in razmišljanja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Ne<span>Mo</span> · Neskončne Možnosti</div>
+      <p style="font-size:12px; color:rgba(255,255,255,0.3); margin-top:6px; font-family:'Barlow',sans-serif;">Zlatka Müller s.p. · Gabrovlje 9, 3210 Slovenske Konjice · Tel.: 031 737 036</p>
+    </div>
+    <div class="footer-legal">
+      Mat. št.: 7147864000 · Davčna št.: 29569630<br>
+      TRR: SI56 6100 0001 5142 435<br>
+      <a href="#">Pravilnik o zasebnosti</a>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT (GDPR) -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Piškotki">
+  <p>Za merjenje obiska uporabljamo Google Analytics (piškotki). Pomaga nam izboljšati stran. <a href="#">Več o zasebnosti</a></p>
+  <div class="cookie-actions">
+    <button class="cookie-decline" id="cookieDecline">Zavrni</button>
+    <button class="cookie-accept" id="cookieAccept">Sprejmi</button>
+  </div>
+</div>
+
+<script>
+  /* ===== Availability status (manual; data-available on <body>) ===== */
+  function applyStatus() {
+    const available = document.body.getAttribute('data-available') !== 'false';
+    const set = (id) => document.getElementById(id);
+    const dot = set('statusDot'), label = set('statusLabel'), btn = set('statusBtn');
+    const bigDot = set('bigDot'), bigText = set('bigStatusText'), bigBtn = set('bigCallBtn');
+    const notify = set('notifyForm');
+    const panelDot = document.querySelector('.panel-status .status-dot');
+    const panelText = document.querySelector('.panel-status-text');
+
+    if (available) {
+      dot.className = 'status-dot';
+      label.innerHTML = '<strong style="color:var(--green)">Aurelija je zdaj dosegljiva</strong><small>Pokličite takoj — linija je prosta</small>';
+      btn.style.display = 'inline-block';
+      bigDot.className = 'big-dot';
+      bigText.textContent = 'Da — linija je prosta';
+      bigText.style.color = 'var(--text)';
+      bigBtn.style.display = 'inline-block';
+      notify.style.display = 'none';
+      if (panelDot) panelDot.classList.remove('red');
+      if (panelText) panelText.innerHTML = 'Aurelija je zdaj dosegljiva<small>Linija je prosta — pokličite takoj</small>';
+    } else {
+      dot.className = 'status-dot red';
+      label.innerHTML = '<strong style="color:var(--red)">Trenutno zasedena</strong><small>Pustite e-naslov — obvestimo vas</small>';
+      btn.style.display = 'none';
+      bigDot.className = 'big-dot'; bigDot.style.cssText = 'width:16px;height:16px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(181,53,42,0.15);';
+      bigText.textContent = 'Trenutno zasedena';
+      bigText.style.color = 'var(--red)';
+      bigBtn.style.display = 'none';
+      notify.style.display = 'block';
+      if (panelDot) panelDot.classList.add('red');
+      if (panelText) panelText.innerHTML = 'Trenutno zasedena<small>Pustite e-naslov, obvestimo vas</small>';
+    }
+  }
+  // Future automation hook:
+  function toggleStatus() {
+    const cur = document.body.getAttribute('data-available') !== 'false';
+    document.body.setAttribute('data-available', cur ? 'false' : 'true');
+    applyStatus();
+  }
+  applyStatus();
+
+  /* ===== Analytics: GTM/GA4 loaded only after consent ===== */
+  const GTM_ID = 'GTM-XXXXXXX'; // TODO: real container id
+  function loadGTM() {
+    if (window.__gtmLoaded) return; window.__gtmLoaded = true;
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer',GTM_ID);
+  }
+  function grantConsent() {
+    gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+    loadGTM();
+  }
+
+  const banner = document.getElementById('cookieBanner');
+  const choice = localStorage.getItem('nemo_consent');
+  if (choice === 'granted') { grantConsent(); }
+  else if (choice !== 'denied') { banner.classList.add('show'); }
+
+  document.getElementById('cookieAccept').addEventListener('click', () => {
+    localStorage.setItem('nemo_consent','granted'); banner.classList.remove('show'); grantConsent();
+  });
+  document.getElementById('cookieDecline').addEventListener('click', () => {
+    localStorage.setItem('nemo_consent','denied'); banner.classList.remove('show');
+  });
+
+  /* ===== Conversion tracking: every tel: click = call_click ===== */
+  document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+    a.addEventListener('click', () => {
+      dataLayer.push({ event: 'call_click', call_number: a.getAttribute('data-call') || a.getAttribute('href').replace('tel:',''), page: 'index' });
+    });
+  });
+  /* secondary events */
+  document.querySelectorAll('form[data-form]').forEach(f => {
+    f.addEventListener('submit', () => dataLayer.push({ event: 'form_submit', form_type: f.getAttribute('data-form'), page: 'index' }));
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vedeževanje za ljubezen in odnose — pokličite zdaj | NeMo</title>
+<meta name="description" content="Vprašanja o ljubezni in odnosih? Jasnovidka Aurelija — 35 let izkušenj. Intuitivno dušno branje po telefonu, takoj. Pokličite 090 68 69 (1,69 €/min).">
+<meta name="robots" content="noindex, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sl_SI">
+<meta property="og:title" content="Vedeževanje za ljubezen in odnose — pokličite zdaj">
+<meta property="og:description" content="Jasnovidka Aurelija, 35 let izkušenj. Branje po telefonu, takoj. 090 68 69.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔮</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent','default',{'ad_storage':'denied','analytics_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});
+</script>
+</head>
+<body data-available="true">
+
+<!-- NAV (minimal: logo + call) -->
+<nav>
+  <a href="index.html" class="nav-logo">Ne<span>Mo</span><small>Neskončne Možnosti</small></a>
+  <ul class="nav-links">
+    <li><a href="tel:0906869" class="nav-cta" data-call="090 68 69">📞 090 68 69</a></li>
+  </ul>
+</nav>
+
+<!-- STICKY CALL BAR -->
+<div class="status-bar">
+  <div class="status-indicator">
+    <div class="status-dot"></div>
+    <div class="status-label">
+      <strong style="color:var(--green)">Aurelija je zdaj dosegljiva</strong>
+      <small>Pokličite takoj — linija je prosta</small>
+    </div>
+  </div>
+  <a href="tel:0906869" class="status-call-btn" data-call="090 68 69">📞 Pokliči 090 68 69</a>
+</div>
+
+<!-- LANDING -->
+<main class="lp">
+  <div class="hero-cosmos"></div>
+  <div class="hero-stars"></div>
+  <div class="lp-inner">
+    <span class="lp-trust">Jasnovidka Aurelija · 35 let izkušenj</span>
+    <h1>Vprašanja o <em>ljubezni in odnosih?</em></h1>
+    <p class="lp-sub">Intuitivno dušno branje vam pomaga razumeti, kaj se dogaja v vašem odnosu — in kako naprej. Brez čakanja, takoj po telefonu.</p>
+
+    <ul class="lp-points">
+      <li>Ali ta odnos ima prihodnost — in v katero smer gre?</li>
+      <li>Kaj čuti druga oseba in zakaj se vede tako, kot se?</li>
+      <li>Boste spet našli ljubezen — kdaj in kje naj bom pozorna/pozoren?</li>
+      <li>Iskreno, diskretno branje, prilagojeno prav vam.</li>
+    </ul>
+
+    <a href="tel:0906869" class="lp-call" data-call="090 68 69">📞 Pokličite zdaj
+      <small>090 68 69 · 1,69 € / min</small>
+    </a>
+    <p class="lp-second">ali pokličite <a href="tel:0907077" data-call="090 70 77">090 70 77</a> (2,19 € / min)</p>
+
+    <p class="lp-prices">Telekom cenik · Dolžina ni omejena · Popolna diskretnost zagotovljena</p>
+    <p class="lp-back"><a href="index.html">← Več o Aureliji in storitvah</a></p>
+  </div>
+</main>
+
+<!-- COOKIE CONSENT (GDPR) -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Piškotki">
+  <p>Za merjenje obiska uporabljamo Google Analytics (piškotki). Pomaga nam izboljšati stran. <a href="index.html#kontakt">Več o zasebnosti</a></p>
+  <div class="cookie-actions">
+    <button class="cookie-decline" id="cookieDecline">Zavrni</button>
+    <button class="cookie-accept" id="cookieAccept">Sprejmi</button>
+  </div>
+</div>
+
+<script>
+  const PAGE='ljubezen';
+  const GTM_ID='GTM-XXXXXXX'; // TODO: real container id
+  function loadGTM(){ if(window.__gtmLoaded)return; window.__gtmLoaded=true;
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',GTM_ID);}
+  function grantConsent(){ gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'}); loadGTM(); }
+  const banner=document.getElementById('cookieBanner');
+  const choice=localStorage.getItem('nemo_consent');
+  if(choice==='granted') grantConsent();
+  else if(choice!=='denied') banner.classList.add('show');
+  document.getElementById('cookieAccept').addEventListener('click',()=>{ localStorage.setItem('nemo_consent','granted'); banner.classList.remove('show'); grantConsent(); });
+  document.getElementById('cookieDecline').addEventListener('click',()=>{ localStorage.setItem('nemo_consent','denied'); banner.classList.remove('show'); });
+  document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>{
+    dataLayer.push({event:'call_click', call_number:a.getAttribute('data-call'), page:PAGE});
+  }));
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Local Claude Code tooling (memory, plans, settings)
+.claude/
+
+# Temp screenshots / scratch
+_*.png
+_probe*.html
+_shots/

@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeMo.si — Wireframe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:       #2d3a4a;
+    --navy-light: #3d4f63;
+    --cream:      #faf8f4;
+    --cream2:     #f3f0ea;
+    --lavender:   #eceaf2;
+    --gold:       #c9a96e;
+    --gold-light: #e8d5b0;
+    --gold-pale:  #f5edd8;
+    --text:       #2a2520;
+    --text-mid:   #5a5248;
+    --text-light: #8a7e72;
+    --white:      #ffffff;
+    --green:      #3a7d5a;
+    --red:        #b5352a;
+    --border:     #ddd8ce;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  /* ===================== */
+  /* TYPOGRAPHY */
+  /* ===================== */
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text);
+  }
+
+  h1 { font-size: clamp(40px, 5.5vw, 72px); }
+  h2 { font-size: clamp(28px, 3.5vw, 48px); }
+  h3 { font-size: clamp(20px, 2.5vw, 28px); }
+
+  p {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 1.85;
+  }
+
+  .eyebrow {
+    font-family: 'Barlow', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    margin: 20px 0;
+  }
+
+  .divider.center { margin: 20px auto; }
+
+  /* ===================== */
+  /* LAYOUT */
+  /* ===================== */
+  section { padding: 96px 0; }
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .container-narrow {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ===================== */
+  /* BUTTONS */
+  /* ===================== */
+  .btn-primary {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 32px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--navy);
+    transition: all 0.25s;
+  }
+
+  .btn-primary:hover {
+    background: var(--navy-light);
+    border-color: var(--navy-light);
+  }
+
+  .btn-gold {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--white);
+    padding: 14px 32px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--gold);
+    transition: all 0.25s;
+  }
+
+  .btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--navy);
+    padding: 13px 32px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--navy);
+    transition: all 0.25s;
+  }
+
+  .btn-outline-white {
+    display: inline-block;
+    background: transparent;
+    color: var(--white);
+    padding: 13px 32px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: all 0.25s;
+  }
+
+  /* ===================== */
+  /* NAVIGATION */
+  /* ===================== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo span {
+    color: var(--gold);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--navy); }
+
+  .nav-cta {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    padding: 10px 22px;
+    border: 2px solid var(--navy);
+  }
+
+  /* ===================== */
+  /* STICKY STATUS BAR */
+  /* ===================== */
+  .status-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 200;
+    background: var(--white);
+    border-top: 2px solid var(--border);
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.07);
+  }
+
+  .status-indicator { display: flex; align-items: center; gap: 10px; }
+
+  .status-dot {
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 3px rgba(58,125,90,0.2);
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+  }
+
+  .status-dot.red {
+    background: var(--red);
+    box-shadow: 0 0 0 3px rgba(181,53,42,0.2);
+    animation: none;
+  }
+
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 0 3px rgba(58,125,90,0.2); }
+    50%      { box-shadow: 0 0 0 7px rgba(58,125,90,0.07); }
+  }
+
+  .status-label {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .status-label small {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-light);
+  }
+
+  .status-call-btn {
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 11px 28px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+
+  /* ===================== */
+  /* HERO */
+  /* ===================== */
+  #hero {
+    background: var(--navy);
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-image-area {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(45,58,74,0.3) 0%,
+      rgba(45,58,74,0.65) 60%,
+      rgba(45,58,74,0.95) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero-photo-placeholder {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #3d4f63 0%, #2d3a4a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.2);
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .hero-photo-placeholder::after {
+    content: 'Fotografija Aurelije — ozadje';
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 140px 48px 120px;
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    color: var(--white);
+    max-width: 680px;
+    margin-bottom: 20px;
+  }
+
+  .hero-content h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-subtitle {
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    max-width: 520px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+
+  .hero-experience {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+
+  .hero-pricing {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 36px;
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .hero-price-item {}
+
+  .hero-price-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 4px;
+  }
+
+  .hero-price-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+
+  .hero-price-val span {
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .hero-price-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 3px;
+  }
+
+  /* ===================== */
+  /* TRUST BAR */
+  /* ===================== */
+  #trust-bar {
+    background: var(--gold-pale);
+    padding: 36px 0;
+    border-bottom: 1px solid var(--gold-light);
+  }
+
+  .trust-items {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .trust-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--navy);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .trust-desc {
+    font-family: 'Barlow', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  /* ===================== */
+  /* AVAILABILITY */
+  /* ===================== */
+  #dosegljivost {
+    background: var(--cream2);
+    padding: 72px 0;
+  }
+
+  .availability-box {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 56px;
+    text-align: center;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+  }
+
+  .availability-box h2 { margin-bottom: 8px; }
+
+  .availability-box > p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 32px;
+  }
+
+  .big-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 24px 0;
+  }
+
+  .big-dot {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 5px rgba(58,125,90,0.15);
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+  }
+
+  .big-status-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .big-call-btn {
+    display: inline-block;
+    background: var(--green);
+    color: var(--white);
+    padding: 16px 48px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    margin: 8px 0 24px;
+  }
+
+  .notify-form {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  .notify-form p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 14px;
+  }
+
+  .notify-form-row { display: flex; gap: 8px; }
+
+  .notify-form input {
+    flex: 1;
+    border: 1px solid var(--border);
+    background: var(--cream);
+    color: var(--text);
+    padding: 12px 16px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .notify-form input:focus { border-color: var(--gold); }
+
+  .notify-form button {
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ===================== */
+  /* O MENI */
+  /* ===================== */
+  #o-meni { background: var(--white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-image-wrap { position: relative; }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--lavender);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .about-gold-accent {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--gold-light);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .about-text h2 { margin-bottom: 8px; }
+
+  .quote-block {
+    border-left: 3px solid var(--gold);
+    padding: 16px 24px;
+    margin: 28px 0;
+    background: var(--gold-pale);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.55;
+  }
+
+  .about-text p { margin-bottom: 16px; }
+
+  /* ===================== */
+  /* STORITVE */
+  /* ===================== */
+  #storitve { background: var(--lavender); }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .services-header p {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 8px 32px rgba(45,58,74,0.1);
+  }
+
+  .service-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+
+  .service-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .service-price-note {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  /* ===================== */
+  /* HOW IT WORKS */
+  /* ===================== */
+  #kako-deluje { background: var(--white); }
+
+  .how-header { text-align: center; margin-bottom: 60px; }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  .step { text-align: center; padding: 0 8px; }
+
+  .step-num-wrap {
+    width: 56px;
+    height: 56px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .step h3 {
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .step p { font-size: 14px; }
+
+  /* ===================== */
+  /* FAQ */
+  /* ===================== */
+  #priprava { background: var(--cream2); }
+
+  .faq-header { margin-bottom: 48px; }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .faq-item {
+    padding: 28px 32px 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-item:nth-child(even) {
+    padding-left: 32px;
+    padding-right: 0;
+    border-left: 1px solid var(--border);
+  }
+
+  .faq-item h3 {
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .faq-item p { font-size: 14px; }
+
+  /* ===================== */
+  /* BLOG */
+  /* ===================== */
+  #blog { background: var(--white); }
+
+  .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .blog-card {
+    border: 1px solid var(--border);
+    background: var(--white);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+
+  .blog-card:hover { box-shadow: 0 6px 24px rgba(45,58,74,0.08); }
+
+  .blog-img {
+    height: 200px;
+    background: var(--lavender);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-family: 'Barlow', sans-serif;
+    color: var(--text-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .blog-body { padding: 28px; }
+
+  .blog-cat {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .blog-card h3 {
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .blog-card p { font-size: 13px; }
+
+  /* ===================== */
+  /* KONTAKT */
+  /* ===================== */
+  #kontakt { background: var(--navy); }
+
+  .kontakt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-info h2 {
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .contact-info .eyebrow { color: var(--gold-light); }
+
+  .contact-info .divider { background: var(--gold-light); }
+
+  .contact-detail { margin-bottom: 28px; }
+
+  .contact-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .contact-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--white);
+  }
+
+  .contact-value a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contact-value a:hover { color: var(--gold-light); }
+
+  .contact-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+  }
+
+  /* form */
+  .contact-form-side h3 {
+    font-size: 26px;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+
+  .form-group { margin-bottom: 18px; }
+
+  .form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 7px;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--white);
+    padding: 13px 16px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+
+  .form-group input:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+
+  .form-group textarea { height: 120px; resize: none; }
+
+  .newsletter-link {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    margin-top: 16px;
+  }
+
+  .newsletter-link a { color: var(--gold-light); text-decoration: none; }
+
+  /* ===================== */
+  /* FOOTER */
+  /* ===================== */
+  footer {
+    background: #1e2830;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 40px 0;
+  }
+
+  .footer-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .footer-logo span { color: var(--gold); }
+
+  .footer-legal {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.9;
+    text-align: right;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .footer-legal a { color: rgba(255,255,255,0.3); text-decoration: none; }
+
+  /* ===================== */
+  /* DEMO TOGGLE */
+  /* ===================== */
+  .demo-toggle {
+    position: fixed;
+    top: 76px;
+    right: 16px;
+    z-index: 300;
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    padding: 12px 14px;
+    font-size: 11px;
+    font-family: 'Barlow', sans-serif;
+    color: var(--text-light);
+    text-align: center;
+    width: 160px;
+  }
+
+  .demo-toggle strong { display: block; color: var(--navy); margin-bottom: 6px; }
+
+  .demo-toggle button {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ===================== */
+  /* RESPONSIVE */
+  /* ===================== */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .container, .container-narrow { padding: 0 24px; }
+    section { padding: 64px 0; }
+    .about-grid, .kontakt-grid, .faq-grid { grid-template-columns: 1fr; }
+    .services-grid, .steps, .blog-grid { grid-template-columns: 1fr; }
+    .hero-content { padding: 100px 24px 100px; }
+    .hero-pricing { gap: 24px; }
+    .trust-items { gap: 32px; }
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-legal { text-align: center; }
+    .availability-box { padding: 32px 24px; }
+    .notify-form-row { flex-direction: column; }
+    .faq-item:nth-child(even) { border-left: none; padding-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- DEMO TOGGLE -->
+<div class="demo-toggle">
+  <strong>⚙ Demo</strong>
+  Preklopi status Aurelije:
+  <button onclick="toggleStatus()">🟢 / 🔴 Toggle</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Ne<span>Mo</span></a>
+  <ul class="nav-links">
+    <li><a href="#o-meni">O meni</a></li>
+    <li><a href="#storitve">Storitve</a></li>
+    <li><a href="#kako-deluje">Kako deluje</a></li>
+    <li><a href="#priprava">FAQ</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+    <li><a href="tel:09068 69" class="nav-cta">📞 090 68 69</a></li>
+  </ul>
+</nav>
+
+<!-- STICKY STATUS BAR -->
+<div class="status-bar">
+  <div class="status-indicator">
+    <div class="status-dot" id="statusDot"></div>
+    <div class="status-label" id="statusLabel">
+      <strong style="color:var(--green)">Aurelija je zdaj dosegljiva</strong>
+      <small>Pokličite takoj — linija prosta</small>
+    </div>
+  </div>
+  <a href="tel:09068 69" class="status-call-btn" id="statusBtn">📞 Pokliči 090 68 69</a>
+</div>
+
+<!-- ======================== -->
+<!-- HERO -->
+<!-- ======================== -->
+<section id="hero">
+  <div class="hero-photo-placeholder"></div>
+  <div class="hero-image-area"></div>
+  <div class="hero-content">
+    <span class="eyebrow" style="color:var(--gold-light)">Neskončne Možnosti · Vedeževanje · Duhovno branje</span>
+    <h1>Intuitivno <em>dušno branje</em><br>za vaš mir</h1>
+    <p class="hero-subtitle">Jasnovidka Aurelija — 35 let izkušenj, 20 let zaupanja strank.</p>
+    <p class="hero-experience">Vedeževanje · Tarot in ciganske karte · Nihalo · Energijsko branje · Razlaga sanj · Branje po telefonu, Skypu ali osebno</p>
+
+    <div class="hero-ctas">
+      <a href="tel:09068 69" class="btn-gold">📞 Pokličite zdaj — 090 68 69</a>
+      <a href="#storitve" class="btn-outline-white">Oglejte si storitve</a>
+    </div>
+
+    <div class="hero-pricing">
+      <div class="hero-price-item">
+        <div class="hero-price-label">Linija 090 68 69</div>
+        <div class="hero-price-val">1,69 € <span>/ min</span></div>
+        <div class="hero-price-note">Telekom cenik</div>
+      </div>
+      <div class="hero-price-item">
+        <div class="hero-price-label">Linija 090 70 77</div>
+        <div class="hero-price-val">2,19 € <span>/ min</span></div>
+        <div class="hero-price-note">Telekom cenik</div>
+      </div>
+      <div class="hero-price-item">
+        <div class="hero-price-label">Zakup minut — po dogovoru</div>
+        <div class="hero-price-val">1,30 € <span>/ min + DDV</span></div>
+        <div class="hero-price-note">Kontaktirajte za rezervacijo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div id="trust-bar">
+  <div class="container">
+    <div class="trust-items">
+      <div>
+        <span class="trust-num">35</span>
+        <span class="trust-desc">Let izkušenj z branjem</span>
+      </div>
+      <div>
+        <span class="trust-num">20</span>
+        <span class="trust-desc">Let dela za stranke</span>
+      </div>
+      <div>
+        <span class="trust-num">100%</span>
+        <span class="trust-desc">Diskretnost zagotovljena</span>
+      </div>
+      <div>
+        <span class="trust-num">24h</span>
+        <span class="trust-desc">Odziv pri zakupu minut</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AVAILABILITY -->
+<section id="dosegljivost">
+  <div class="container">
+    <div class="availability-box">
+      <span class="eyebrow">Trenutna razpoložljivost</span>
+      <h2>Ali je Aurelija zdaj dosegljiva?</h2>
+      <p>Status se posodablja v realnem času.</p>
+
+      <div class="big-status">
+        <div class="big-dot" id="bigDot"></div>
+        <div class="big-status-text" id="bigStatusText">Da — linija je prosta</div>
+      </div>
+
+      <a href="tel:09068 69" class="big-call-btn" id="bigCallBtn">Pokličite zdaj: 090 68 69</a>
+
+      <div class="notify-form" id="notifyForm" style="display:none;">
+        <p>Pustite email — obvestimo vas, ko bo Aurelija spet prosta:</p>
+        <div class="notify-form-row">
+          <input type="email" placeholder="vaš@email.si">
+          <button>Obvestite me</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O MENI -->
+<section id="o-meni">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <div class="about-photo">Fotografija Aurelije</div>
+        <div class="about-gold-accent"></div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">O jasnovidki</span>
+        <h2>Menim, da sem<br><em style="font-style:italic">služabnica duha</em></h2>
+        <div class="divider"></div>
+        <p>Moje ime je <strong>Aurelija</strong> in sem vesela, da ste obiskali mojo spletno stran. Iz kart berem že <strong>35 let</strong>, od tega 20 let za ljudi, ki name naletijo ali mi zaupajo.</p>
+        <p>Osnovno področje dela je branje po telefonski liniji in živa branja v obliki Skypa ter po potrebi osebnega obiska. Pri ponujenih telefonskih storitvah je moja koncentracija osredotočena na vašo energijo, kjerkoli se nahajate.</p>
+        <div class="quote-block">
+          "Tukaj sem za moje stranke, da jim dam najboljše možne storitve po zmernih cenah."
+        </div>
+        <p>Splošni izraz, ki mi je najbolj udoben, je <strong>Duhovna poročevalka — svetovalka za osebni razvoj</strong>. Ni na meni, da vam povem, kaj storiti. Moje delo vam pomaga razumeti, kdo ste in kaj ste sposobni.</p>
+        <p style="font-size:13px; color:var(--text-light);">Vsa branja izvajam v prostorih, kjer ni drugih ljudi niti naprav za prisluhe — <strong>popolna diskretnost je zagotovljena.</strong></p>
+        <a href="#kontakt" class="btn-outline" style="margin-top:28px;">Pišite mi</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORITVE -->
+<section id="storitve">
+  <div class="container">
+    <div class="services-header">
+      <span class="eyebrow">Kaj ponujam</span>
+      <h2>Storitve in cenik</h2>
+      <div class="divider center"></div>
+      <p>Vedeževanje in prognoza za posameznika z kartomaniko Ciganskih kart ali Tarot kartami. Nihalo, branje energijskega polja, Knjiga premen, razlaga sanj.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🔮</span>
+        <h3>Telefonsko branje</h3>
+        <p>Intuitivno dušno in energijsko branje po plačljivi telefonski liniji. Dolžina ni omejena. Tarot, ciganske karte, nihalo, energijsko polje.</p>
+        <div class="service-price">1,69 € / min</div>
+        <span class="service-price-note">Linija 090 68 69 · Telekom cenik</span>
+        <div class="service-price">2,19 € / min</div>
+        <span class="service-price-note">Linija 090 70 77 · Telekom cenik</span>
+        <a href="tel:09068 69" class="btn-primary" style="margin-top:20px;">📞 Pokličite zdaj</a>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">⏱</span>
+        <h3>Časovni zakup minut</h3>
+        <p>Dušno in energijsko branje v vnaprej zakupljenem trajanju. Branje po telefonu ali Skypu s popustom. Izvršitev v 3–4 delovnih dneh.</p>
+        <div class="service-price">1,30 € / min</div>
+        <span class="service-price-note">+ DDV · Kontaktirajte za rezervacijo</span>
+        <a href="#kontakt" class="btn-outline" style="margin-top:20px;">Dogovorite termin</a>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">👁</span>
+        <h3>Živo branje</h3>
+        <p>Osebni obisk ali Skype. Rezervacija v roku 1–3 dni po plačilu. Ob naročilu dodajte e-poštni naslov za potrditev termina.</p>
+        <div class="service-price">Po dogovoru</div>
+        <span class="service-price-note">Pišite za cenik in termin</span>
+        <a href="#kontakt" class="btn-outline" style="margin-top:20px;">Rezervirajte termin</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KAKO DELUJE -->
+<section id="kako-deluje">
+  <div class="container">
+    <div class="how-header">
+      <span class="eyebrow">Postopek</span>
+      <h2>Kako poteka branje?</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num-wrap"><span class="step-num">1</span></div>
+        <h3>Preverite status</h3>
+        <p>Preverite zgoraj ali je Aurelija zdaj dosegljiva. Ko je zelena — pokličite takoj.</p>
+      </div>
+      <div class="step">
+        <div class="step-num-wrap"><span class="step-num">2</span></div>
+        <h3>Pokličete</h3>
+        <p>Pokličete 090 68 69 ali 090 70 77. Linija je takoj aktivna, brez čakanja.</p>
+      </div>
+      <div class="step">
+        <div class="step-num-wrap"><span class="step-num">3</span></div>
+        <h3>Odprt um</h3>
+        <p>Opustite pričakovanja. Postavljajte vprašanja. Branje je interaktivno in prilagojeno vam.</p>
+      </div>
+      <div class="step">
+        <div class="step-num-wrap"><span class="step-num">4</span></div>
+        <h3>Zapiski</h3>
+        <p>Priporočam zapiski — informacija se včasih razjasni šele čez čas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="priprava">
+  <div class="container">
+    <div class="faq-header">
+      <span class="eyebrow">Pred klicem</span>
+      <h2>Pogosta vprašanja</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Kaj je dušno branje?</h3>
+        <p>Dušno branje ni enako kot vedeževanje. Odčitek združuje vprašanja iz vaše preteklosti, sedanjosti in prihodnosti, da bi vam bil v najboljšo pomoč na življenjski poti.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Kako se pripraviti?</h3>
+        <p>Opustite vsa pričakovanja in vstopite z odprtim umom. Če ste osredotočeni na to, da bi slišali nekaj posebnega, lahko zgrešite dragoceno informacijo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Ali je branje diskretno?</h3>
+        <p>Izvajam ga v prostorih brez drugih ljudi in naprav za prisluhe. Zavedám se, da sta za to delo nujni popolno zaupanje in diskretnost.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Katere tehnike uporabljate?</h3>
+        <p>Ciganske karte, Tarot, Nihalo, branje energijskega polja, Knjiga premen, razlaga sanj. Pristop prilagodim vašim potrebam.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Ali mi boste določili usodo?</h3>
+        <p>Ni na meni, da vam povem, kaj storiti. Prihodnost se spreminja na podlagi vaših odločitev. Moje delo vam pomaga razumeti, kdo ste.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Kako dolgo traja branje?</h3>
+        <p>Dolžina ni omejena in je odvisna od vaših potreb. Priporočam zapiski — informacija se včasih razjasni šele v daljšem obdobju.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="container">
+    <div class="blog-header">
+      <div>
+        <span class="eyebrow">Znanje in razmišljanja</span>
+        <h2>Iz bloga</h2>
+      </div>
+      <a href="#" class="btn-outline" style="font-size:12px; padding:10px 20px;">Vsi prispevki</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-img">Slika prispevka</div>
+        <div class="blog-body">
+          <span class="blog-cat">Vedeževanje</span>
+          <h3>Zakaj kličemo vedeževanje?</h3>
+          <p>Razlogi, zakaj se ljudje odločijo za duhovno svetovanje in kaj lahko pričakujejo...</p>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">Slika prispevka</div>
+        <div class="blog-body">
+          <span class="blog-cat">Tarot</span>
+          <h3>Opis cigank in delo s kartami</h3>
+          <p>Ciganske karte imajo bogato zgodovino in posebno simboliko. Spoznajte njihov pomen...</p>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">Slika prispevka</div>
+        <div class="blog-body">
+          <span class="blog-cat">Jasnovidnost</span>
+          <h3>Kdo je jasnovidka / jasnovidec?</h3>
+          <p>Razlika med vedeževalcem, medijem in jasnovidcem — kaj vsak od njih zmore...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="container">
+    <div class="kontakt-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Stopite v stik</span>
+        <h2>Kontakt</h2>
+        <div class="divider"></div>
+
+        <div class="contact-detail">
+          <div class="contact-label">Telefonska linija (takojšen klic)</div>
+          <div class="contact-value">
+            <a href="tel:09068 69">090 68 69</a> &nbsp;·&nbsp; <a href="tel:09070 77">090 70 77</a>
+          </div>
+          <div class="contact-sub">1,69 € / min &nbsp;·&nbsp; 2,19 € / min · Telekom cenik</div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-label">E-pošta</div>
+          <div class="contact-value"><a href="mailto:info@nemo.si">info@nemo.si</a></div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-label">Facebook</div>
+          <div class="contact-value">
+            <a href="https://www.facebook.com/neskoncnemoznosti/" target="_blank">Neskončne Možnosti</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-label">Naslov</div>
+          <div class="contact-value" style="font-size:18px; line-height:1.5;">
+            Gabrovlje 9<br>3210 Slovenske Konjice
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-side">
+        <h3>Pošljite sporočilo</h3>
+        <div class="form-group">
+          <label>Ime *</label>
+          <input type="text" placeholder="Vaše ime">
+        </div>
+        <div class="form-group">
+          <label>E-poštni naslov *</label>
+          <input type="email" placeholder="vaš@email.si">
+        </div>
+        <div class="form-group">
+          <label>Zadeva</label>
+          <input type="text" placeholder="Tema vašega sporočila">
+        </div>
+        <div class="form-group">
+          <label>Sporočilo</label>
+          <textarea placeholder="Vaše sporočilo..."></textarea>
+        </div>
+        <button class="btn-gold" style="width:100%; text-align:center; cursor:pointer; border:none; padding:15px;">Pošlji sporočilo</button>
+        <p class="newsletter-link">
+          <a href="#">Naročite se na novičke</a> — kratke in vzpodbudne misli in razmišljanja.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Ne<span>Mo</span> · Neskončne Možnosti</div>
+      <p style="font-size:12px; color:rgba(255,255,255,0.3); margin-top:6px; font-family:'Barlow',sans-serif;">Zlatka Müller s.p. · Gabrovlje 9, 3210 Slovenske Konjice</p>
+    </div>
+    <div class="footer-legal">
+      Mat. št.: 7147864000 · Davčna št.: 29569630<br>
+      TRR: SI56 6100 0001 5142 435<br>
+      <a href="#">Pravilnik o zasebnosti</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  let isAvailable = true;
+
+  function toggleStatus() {
+    isAvailable = !isAvailable;
+
+    const dot       = document.getElementById('statusDot');
+    const label     = document.getElementById('statusLabel');
+    const btn       = document.getElementById('statusBtn');
+    const bigDot    = document.getElementById('bigDot');
+    const bigText   = document.getElementById('bigStatusText');
+    const bigBtn    = document.getElementById('bigCallBtn');
+    const notify    = document.getElementById('notifyForm');
+
+    if (isAvailable) {
+      dot.className = 'status-dot';
+      label.innerHTML = '<strong style="color:var(--green)">Aurelija je zdaj dosegljiva</strong><small>Pokličite takoj — linija prosta</small>';
+      btn.style.cssText = 'background:var(--green);color:white;padding:11px 28px;font-family:Barlow,sans-serif;font-size:14px;font-weight:600;text-decoration:none;display:inline-block;';
+      btn.textContent = '📞 Pokliči 090 68 69';
+
+      bigDot.style.cssText = 'width:16px;height:16px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(58,125,90,0.15);animation:pulse 2s infinite;flex-shrink:0;';
+      bigText.textContent = 'Da — linija je prosta';
+      bigText.style.color = 'var(--text)';
+      bigBtn.style.display = 'inline-block';
+      bigBtn.style.background = 'var(--green)';
+      notify.style.display = 'none';
+    } else {
+      dot.className = 'status-dot red';
+      label.innerHTML = '<strong style="color:var(--red)">Trenutno zasedena</strong><small>Pustite email — obvestimo vas</small>';
+      btn.style.cssText = 'background:transparent;color:var(--navy);border:2px solid var(--navy);padding:9px 28px;font-family:Barlow,sans-serif;font-size:13px;font-weight:600;text-decoration:none;display:inline-block;';
+      btn.textContent = '✉ Obvestite me';
+
+      bigDot.style.cssText = 'width:16px;height:16px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(181,53,42,0.15);flex-shrink:0;';
+      bigText.textContent = 'Trenutno zasedena';
+      bigText.style.color = 'var(--red)';
+      bigBtn.style.display = 'none';
+      notify.style.display = 'block';
+    }
+  }
+</script>
+</body>
+</html>
