@@ -136,9 +136,10 @@
 
 <!-- HERO -->
 <section id="hero" class="sky">
-  <div class="stars"></div>
-  <div class="hero-emblem" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#emblem"/></svg></div>
-  <div class="container">
+<video class="hero-video" autoplay muted loop playsinline>
+  <source src="img/hero.mp4" type="video/mp4">
+</video>
+<div class="container">
     <div class="hero-inner">
       <h1>NeMo Vedeževanje</h1>
       <p class="hero-sub">Intuitivno dušno branje za vaš mir.</p>
@@ -146,10 +147,10 @@
       <div class="hero-status"><span class="dot"></span> Aurelija je prosta. Pokličite zdaj:</div>
       <div>
         <a href="tel:0906869" class="btn-lav" data-call="090 68 69"><span class="ico" aria-hidden="true"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9.32729 10.6907C11.1839 15.7555 13.1059 17.7762 17.9956 19.9286L15.8765 22.9046C10.2617 20.2165 7.46503 15.6852 6.1479 12.149L9.32729 10.6907Z" fill="#8F5AAA"/>
-          <path d="M10.8846 3.69843C11.8773 3.69454 12.6322 4.52062 12.5645 5.45602C12.458 6.92802 12.5714 7.99005 12.8767 9.30647C13.0444 10.0296 12.665 10.764 12.0621 11.2371C11.2495 11.8747 10.6286 12.6871 10.1352 13.3865C9.45128 14.3558 7.09768 14.2862 6.57718 13.2301C5.50748 11.0599 4.78254 7.06145 6.34462 4.36005C6.58998 3.93573 7.08403 3.71329 7.59596 3.71129L10.8846 3.69843Z" fill="#8F5AAA"/>
-          <path d="M25.9545 19.7586C26.078 18.8283 25.3004 18.0212 24.309 17.9722C22.7489 17.895 21.6461 17.661 20.2991 17.2164C19.5591 16.9722 18.7415 17.2396 18.1717 17.748C17.4037 18.4332 16.4751 18.9176 15.6806 19.2961C14.5794 19.8207 14.3695 22.0357 15.417 22.6507C17.5697 23.9146 21.6856 25.0751 24.7131 23.9355C25.1886 23.7564 25.4819 23.32 25.5455 22.8403L25.9545 19.7586Z" fill="#8F5AAA"/>
-        </svg></span> 090 68 69</a>
+          <path d="M9.32729 10.6907C11.1839 15.7555 13.1059 17.7762 17.9956 19.9286L15.8765 22.9046C10.2617 20.2165 7.46503 15.6852 6.1479 12.149L9.32729 10.6907Z" fill="#0F1730"/>
+          <path d="M10.8846 3.69843C11.8773 3.69454 12.6322 4.52062 12.5645 5.45602C12.458 6.92802 12.5714 7.99005 12.8767 9.30647C13.0444 10.0296 12.665 10.764 12.0621 11.2371C11.2495 11.8747 10.6286 12.6871 10.1352 13.3865C9.45128 14.3558 7.09768 14.2862 6.57718 13.2301C5.50748 11.0599 4.78254 7.06145 6.34462 4.36005C6.58998 3.93573 7.08403 3.71329 7.59596 3.71129L10.8846 3.69843Z" fill="#0F1730"/>
+          <path d="M25.9545 19.7586C26.078 18.8283 25.3004 18.0212 24.309 17.9722C22.7489 17.895 21.6461 17.661 20.2991 17.2164C19.5591 16.9722 18.7415 17.2396 18.1717 17.748C17.4037 18.4332 16.4751 18.9176 15.6806 19.2961C14.5794 19.8207 14.3695 22.0357 15.417 22.6507C17.5697 23.9146 21.6856 25.0751 24.7131 23.9355C25.1886 23.7564 25.4819 23.32 25.5455 22.8403L25.9545 19.7586Z" fill="#0F1730"/>
+        </svg></span> Pokličite 090 68 69</a>
       </div>
       <p class="hero-price">1,69 € / min · Telekom cenik</p>
     </div>
@@ -167,8 +168,8 @@
       </div>
       <div class="trust-item">
         <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg></span>
-        <div class="n">20</div>
-        <div class="l">Let za stranke</div>
+        <div class="n">10.000+</div>
+        <div class="l">Klicev</div>
       </div>
       <div class="trust-item">
         <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-globe"/></svg></span>
@@ -189,15 +190,17 @@
 </div>
 
 <!-- O MENI -->
-<section id="o-meni">
+<section id="o-meni" class="sky">
   <div class="container">
     <div class="about-grid">
-      <div class="portrait">
-        <img src="img/aurelija.jpg" alt="Aurelija — jasnovidka in duhovna svetovalka">
+      <div class="portrait-wrap">
+        <div class="portrait">
+          <img src="img/aurelija.jpg" alt="Aurelija — jasnovidka in duhovna svetovalka">
+        </div>
       </div>
       <div class="about-text">
         <h2>Menim, da sem služabnica duha</h2>
-        <p class="lead">Moje ime je Aurelija in vesela sem, da ste obiskali mojo spletno stran. Iz kart berem že 35 let, od tega 20 let za ljudi, ki name naletijo ali mi zaupajo.</p>
+        <p>Moje ime je Aurelija in vesela sem, da ste obiskali mojo spletno stran. Iz kart berem že 35 let, od tega 20 let za ljudi, ki name naletijo ali mi zaupajo.</p>
         <p>Osnovno področje dela je <strong>branje preko telefonske linije</strong> in <strong>živa branja</strong> ter po potrebi <strong>osebni obisk</strong>. Pri telefonskih storitvah je moja koncentracija osredotočena na vašo energijo, kjerkoli se nahajate. Tukaj sem za svoje stranke, da jim dam najboljše možne storitve po zmernih cenah.</p>
 
         <blockquote class="quote">
@@ -205,16 +208,7 @@
           <cite>Konrad Adenauer</cite>
         </blockquote>
 
-        <p>Splošni izraz, ki mi je najbolj domač, je <strong>Duhovna poročevalka — svetovalka za osebni razvoj</strong>. Ni na meni, da vam povem, kaj storiti. Vaša prihodnost se spreminja vsak dan na podlagi vaših odločitev. Moje delo vam pomaga <strong>razumeti, kdo ste in česa ste sposobni.</strong></p>
-
-        <details class="philosophy">
-          <summary>Preberite celotno filozofijo</summary>
-          <p>Človek ima rad definicijo — tu se počuti varno. A umu daje le vtis, da nam ni treba skrbeti za neskončne možnosti, ko se srečamo z novim izzivom, presenečenjem ali novo osebo. Duhovnost mnogi prepoznavajo kot »vedeževanje« ali bližnjico do učenja o svoji bodočnosti. V resnici je to bolj vključujoč izraz: vsi smo psihični-duhovni. <em>Psychic</em> pomeni sposobnost dojemanja informacij, ki so zunaj naših fizičnih čutov.</p>
-          <p>Medij po svoji definiciji pomeni »biti med« — omogočiti, da se informacija sprejme. Tako kot radio ali televizija nista vir glasbe, ampak medij, ki nam po signalu omogoči, da jo slišimo. Tudi človek je lahko kanal, skozi katerega prehajajo informacije. Sem prinašam sporočila iz Duhovne dimenzije, ki imajo lahko za različne ljudi različne pomene.</p>
-          <p>Menim, da sem služabnica duha. Vsi smo predniki drug drugega — ne glede na zemeljsko identiteto, družbeni položaj ali poreklo smo duhovi, ki imajo človeško izkušnjo, in smo izraz »Najvišjega«. Svoj del sveta čutim tukaj, v slikoviti Dravinjski dolini, kjer je leta preživela spiritualistka in teozofinja Adelma Von Vay.</p>
-        </details>
-
-        <p class="note" style="font-size:0.92rem;">Vsa branja izvajam v prostorih, kjer ni drugih ljudi niti naprav za prisluhe — popolna diskretnost je zagotovljena.</p>
+        <a href="o-meni.html" class="btn-white">Več o meni →</a>
       </div>
     </div>
   </div>
@@ -222,16 +216,15 @@
 
 <!-- KAKO DELUJE -->
 <section id="kako-deluje" class="sky">
-  <div class="stars"></div>
   <div class="container">
     <div style="text-align:center; max-width:640px; margin:0 auto;">
       <h2>Kako poteka branje?</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="ring">1</div><h3>Pokličete</h3><p>Pokličite 090 68 69 ali 090 70 77. Linija je takoj aktivna, brez čakanja.</p></div>
-      <div class="step"><div class="ring">2</div><h3>Odprt um</h3><p>Opustite pričakovanja in vstopite z odprtim umom. Branje je interaktivno in prilagojeno vam.</p></div>
-      <div class="step"><div class="ring">3</div><h3>Vprašate</h3><p>Postavljajte vprašanja iz preteklosti, sedanjosti in prihodnosti — pristop prilagodim vašim potrebam.</p></div>
-      <div class="step"><div class="ring">4</div><h3>Zapiski</h3><p>Priporočam, da si delate zapiske — informacija se včasih razjasni šele čez čas.</p></div>
+      <div class="step"><div class="ring">1.</div><h3>Pokličete</h3><p>Pokličite 090 68 69 ali 090 70 77. Linija je takoj aktivna, brez čakanja.</p></div>
+      <div class="step"><div class="ring">2.</div><h3>Odprt um</h3><p>Opustite pričakovanja in vstopite z odprtim umom. Branje je interaktivno in prilagojeno vam.</p></div>
+      <div class="step"><div class="ring">3.</div><h3>Vprašate</h3><p>Postavljajte vprašanja iz preteklosti, sedanjosti in prihodnosti — pristop prilagodim vašim potrebam.</p></div>
+      <div class="step"><div class="ring">4.</div><h3>Zapiski</h3><p>Priporočam, da si delate zapiske — informacija se včasih razjasni šele čez čas.</p></div>
     </div>
   </div>
 </section>
@@ -279,7 +272,6 @@
 
 <!-- KONTAKT (info only) -->
 <section id="kontakt" class="sky">
-  <div class="stars"></div>
   <div class="container">
     <div class="contact-grid">
       <div>
