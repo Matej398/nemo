@@ -41,7 +41,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; overflow-x: hidden; ma
 body {
   font-family: 'Barlow', system-ui, sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.8;
   color: var(--ink);
   background: var(--lav-050);
@@ -63,9 +63,9 @@ h1, h2, h3, h4 {
   letter-spacing: 0;
   color: var(--ink);
 }
-h1 { font-size: clamp(34px, 4.4vw, 60px); font-weight: 300; letter-spacing: -0.01em; }
-h2 { font-size: clamp(32px, 4vw, 52px); }
-h3 { font-size: clamp(21px, 2.3vw, 29px); }
+h1 { font-size: clamp(38px, 5vw, 68px); font-weight: 500; letter-spacing: -0.01em; }
+h2 { font-size: clamp(34px, 4.4vw, 56px); }
+h3 { font-size: clamp(23px, 2.6vw, 32px); }
 
 p { font-size: 1rem; line-height: 1.85; color: var(--ink); }
 strong { font-weight: 700; color: inherit; }
@@ -174,7 +174,7 @@ section { padding: 104px 0; position: relative; }
   animation: ctaGlow 2.8s ease-in-out infinite;
 }
 .btn-call:hover { transform: translateY(-2px); background: #D4B870; }
-#kako-deluje h2 { font-weight: 400; }
+#kako-deluje h2 { font-weight: 500; }
 #storitve-teaser h2 { margin-bottom: 20px; }
 .btn-call .ph, .nav-call .ph, .btn-ghost .ph { flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
 .btn-call .ph, .nav-call .ph { color: #141414; }
@@ -185,6 +185,7 @@ section { padding: 104px 0; position: relative; }
   color: var(--cream);
   background: rgba(255,255,255,0.05);
   border: 1.5px solid rgba(231,206,142,0.5);
+  border-radius: 50px;
 }
 .btn-ghost:hover { background: rgba(255,255,255,0.12); border-color: var(--lav-200); }
 .btn-ghost.on-light { color: var(--plum-800); border-color: var(--plum-400); background: transparent; }
@@ -284,7 +285,7 @@ nav.scrolled {
 .hero-video {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; object-position: center;
-  opacity: 0.13;
+  opacity: 0.25;
   z-index: 0;
   pointer-events: none;
 }
@@ -397,7 +398,7 @@ nav.scrolled {
 }
 .about-text h2 { margin-bottom: 6px; }
 .about-text .lead { margin: 20px 0; }
-.about-text p { margin-bottom: 18px; color: var(--plum-800); }
+.about-text p { margin-bottom: 18px; color: var(--plum-800); font-size: 1.18rem; }
 .quote {
   border-left: 2px solid var(--plum-400);
   padding: 6px 0 6px 26px; margin: 30px 0;
@@ -437,7 +438,7 @@ details.philosophy p { font-size: 0.96rem; }
 
 /* ---------- STORITVE TEASER ---------- */
 #storitve-teaser { background: var(--lav-050); }
-.teaser-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+.teaser-grid { display: grid; grid-template-columns: 1.5fr 0.7fr; gap: 60px; align-items: center; }
 .teaser-list { list-style: none; margin: 24px 0 32px; }
 .teaser-list li {
   display: flex; align-items: baseline; gap: 14px; padding: 14px 0;
@@ -446,7 +447,7 @@ details.philosophy p { font-size: 0.96rem; }
 .teaser-list .price { margin-left: auto; font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: var(--plum-700); white-space: nowrap; }
 .teaser-card {
   background: linear-gradient(165deg, var(--plum-700), var(--plum-900));
-  border-radius: 18px; padding: 44px; text-align: center; color: var(--cream);
+  border-radius: 18px; padding: 44px 36px; text-align: center; color: var(--cream);
   border: 1px solid var(--lav-200); box-shadow: 0 24px 60px rgba(20,20,20,0.25);
 }
 .teaser-card .mark { width: 36px; height: 36px; color: var(--star); margin: 0 auto 18px; }
@@ -458,7 +459,7 @@ details.philosophy p { font-size: 0.96rem; }
 #faq { background: var(--lav-100); }
 .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 56px; margin-top: 80px; }
 .faq-item { padding: 26px 0; border-bottom: 1px solid var(--lav-200); }
-.faq-item h3 { font-size: 1.75rem; color: var(--plum-800); margin-bottom: 10px; }
+.faq-item h3 { font-size: 1.75rem; color: var(--plum-800); margin-bottom: 18px; }
 .faq-item p { font-size: 1.1rem; color: var(--ink); }
 
 /* ---------- FOOTER / KONTAKT ---------- */
@@ -466,7 +467,7 @@ footer { background: #0d0d0d; font-family: 'Barlow', sans-serif; margin-top: aut
 .footer-top { padding: 52px 0; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 0.7fr 1fr; gap: 48px; }
 .footer-col {}
-.footer-heading { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #C9A85C; margin-bottom: 16px; }
+.footer-heading { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: #C9A85C; margin-bottom: 16px; }
 .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 .footer-brand .mark { width: 30px; height: 30px; color: #C9A85C; }
 .footer-brand .name { font-family: 'Barlow', sans-serif; font-size: 22px; font-weight: 600; color: var(--cream); }
@@ -513,19 +514,20 @@ footer { background: #0d0d0d; font-family: 'Barlow', sans-serif; margin-top: aut
 .page-head h1 { margin-bottom: 42px; }
 .page-head p { max-width: 600px; margin: 0 auto; color: rgba(244,237,221,0.82); font-size: 1.15rem; }
 
-#cenik { background: var(--lav-050); }
-.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 56px; }
+#cenik { background: #ffffff; padding: 80px 0; }
+.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
 .price-card {
-  background: var(--cream); border: 1px solid var(--lav-200); border-radius: 16px;
-  padding: 38px 32px; display: flex; flex-direction: column;
-  box-shadow: 0 14px 40px rgba(20,20,20,0.06); transition: transform 0.2s, box-shadow 0.2s;
+  background: #ffffff; border: 1px solid rgba(0,0,0,0.1); border-radius: 16px;
+  padding: 32px 28px; text-align: center; display: flex; flex-direction: column;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
-.price-card:hover { transform: translateY(-4px); box-shadow: 0 22px 56px rgba(20,20,20,0.12); }
-.price-card .mark { width: 46px; height: 46px; color: var(--plum-600); margin-bottom: 18px; }
-.price-card h3 { color: var(--plum-800); margin-bottom: 12px; }
-.price-card p { font-size: 0.96rem; flex: 1; margin-bottom: 22px; color: var(--plum-800); }
-.price-tag { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--plum-700); line-height: 1.1; }
-.price-note { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--plum-400); display: block; margin-bottom: 16px; }
+.price-card:hover { border-color: #C9A85C; box-shadow: 0 8px 32px rgba(201,168,92,0.12); }
+.price-card.featured { border-color: #C9A85C; }
+.price-card .mark { display: none; }
+.price-card h3 { color: #141414; margin-bottom: 10px; font-size: clamp(20px, 2.2vw, 26px); }
+.price-card p { font-size: 0.9rem; flex: 1; margin-bottom: 28px; color: #888; line-height: 1.6; }
+.price-tag { font-family: 'Playfair Display', serif; font-size: clamp(36px, 4.5vw, 52px); font-weight: 400; color: #141414; line-height: 1; margin-bottom: 6px; }
+.price-note { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 400; letter-spacing: 0.03em; color: #999; display: block; margin-bottom: 24px; }
 
 /* themed reading sections */
 .reading { padding: 92px 0; overflow: hidden; background: var(--lav-050); }
@@ -543,6 +545,7 @@ footer { background: #0d0d0d; font-family: 'Barlow', sans-serif; margin-top: aut
   transition: transform 0.4s ease;
 }
 .tarot:hover { transform: rotate(-3deg) translateY(-6px); }
+.reading .tarot:hover { transform: rotate(3deg) translateY(-6px); }
 .tarot svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .reading-body .eyebrow { color: var(--plum-600); }
 .reading-body h2 { color: var(--plum-800); margin-bottom: 16px; }
@@ -553,8 +556,8 @@ footer { background: #0d0d0d; font-family: 'Barlow', sans-serif; margin-top: aut
 }
 .reading-points li::before { content: '✦'; position: absolute; left: 0; top: 12px; color: var(--plum-400); }
 .reading-cta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-.reading-cta .sec { font-size: 14px; color: var(--plum-600); }
-.reading-cta .sec a { color: var(--plum-700); font-weight: 700; text-decoration: none; }
+.reading-cta .sec { font-size: 1.2rem; color: var(--plum-600); }
+.reading-cta .sec a { color: var(--plum-700); font-weight: 600; text-decoration: none; font-size: 1.2rem; margin: 0 8px; }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 940px) {
