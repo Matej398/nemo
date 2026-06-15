@@ -95,6 +95,14 @@
     <path fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"
       d="M24 12 C20 4 6 6 6 12 C6 18 20 20 24 12 C28 4 42 6 42 12 C42 18 28 20 24 12 Z"/>
   </symbol>
+  <symbol id="ic-hourglass" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 2h14"/>
+      <path d="M5 22h14"/>
+      <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/>
+      <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/>
+    </g>
+  </symbol>
   <symbol id="ic-globe" viewBox="0 0 24 24">
     <g fill="none" stroke="currentColor" stroke-width="1.7">
       <circle cx="12" cy="12" r="10.2"/>
@@ -126,22 +134,34 @@
     <span class="brand-name">Ne<b>Mo</b><small>Neskončne Možnosti</small></span>
   </a>
   <ul class="nav-links">
-    <li><a href="#o-meni">O meni</a></li>
+    <li><a href="#">Domov</a></li>
+    <li><a href="o-meni.html">O meni</a></li>
     <li><a href="storitve.html">Storitve</a></li>
     <li><a href="#faq">Vprašanja</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
+    <li><a href="zakup-minut.html">Zakup minut</a></li>
     <li class="nav-call-li"><a href="tel:0906869" class="nav-call" data-call="090 68 69"><span class="ph" aria-hidden="true"><svg viewBox="0 0 30 30"><use href="#ic-phone"/></svg></span> 090 68 69</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero" class="sky">
-<video class="hero-video" autoplay muted loop playsinline>
+<video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
   <source src="img/hero.mp4" type="video/mp4">
 </video>
+<script>
+  (function(){
+    var videos = ['img/hero.mp4','img/hero2.mp4'];
+    var v = document.getElementById('heroVideo');
+    var src = videos[Math.random() < 0.5 ? 0 : 1];
+    v.querySelector('source').src = src;
+    v.load();
+  })();
+</script>
 <div class="container">
     <div class="hero-inner">
-      <h1>NeMo Vedeževanje</h1>
+      <div class="mandala-float"><img src="img/mandala.svg" class="hero-mandala" alt=""></div>
+      <h1>NeMo vedeževanje</h1>
       <p class="hero-sub">Intuitivno dušno branje za vaš mir.</p>
 
       <div class="hero-status"><span class="dot"></span> Aurelija je prosta. Pokličite zdaj:</div>
@@ -199,7 +219,7 @@
         </div>
       </div>
       <div class="about-text">
-        <h2>Menim, da sem služabnica duha</h2>
+        <h2>Menim, da sem služabnica duha…</h2>
         <p>Moje ime je Aurelija in vesela sem, da ste obiskali mojo spletno stran. Iz kart berem že 35 let, od tega 20 let za ljudi, ki name naletijo ali mi zaupajo.</p>
         <p>Osnovno področje dela je <strong>branje preko telefonske linije</strong> in <strong>živa branja</strong> ter po potrebi <strong>osebni obisk</strong>. Pri telefonskih storitvah je moja koncentracija osredotočena na vašo energijo, kjerkoli se nahajate. Tukaj sem za svoje stranke, da jim dam najboljše možne storitve po zmernih cenah.</p>
 
@@ -244,9 +264,9 @@
         <a href="storitve.html" class="btn-ghost on-light">Oglejte si vse storitve →</a>
       </div>
       <div class="teaser-card">
-        <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
+        <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-hourglass"/></svg>
         <h3>Branje brez čakanja</h3>
-        <p>Intuitivno dušno in energijsko branje v poljubnem trajanju na podlagi vnaprej zakupljenega časa.</p>
+        <p class="teaser-card-p">Intuitivno dušno in energijsko branje v poljubnem trajanju na podlagi vnaprej zakupljenega časa.</p>
         <a href="tel:0906869" class="btn-call" data-call="090 68 69">Zakup minut →</a>
       </div>
     </div>
@@ -270,56 +290,63 @@
   </div>
 </section>
 
-<!-- KONTAKT (info only) -->
-<section id="kontakt" class="sky">
-  <div class="container">
-    <div class="contact-grid">
-      <div>
-        <h2>Kontakt</h2>
-        <div class="divider-star"><span>✦</span></div>
+<!-- FOOTER / KONTAKT -->
+<footer id="kontakt">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
 
-        <div class="contact-block">
-          <div class="l">Telefonska linija — takojšen klic</div>
-          <div class="v"><a href="tel:0906869" data-call="090 68 69">090 68 69</a> &nbsp;·&nbsp; <a href="tel:0907077" data-call="090 70 77">090 70 77</a></div>
-          <div class="sub">1,69 € / min · 2,19 € / min · Telekom cenik</div>
+        <div class="footer-col">
+          <div class="footer-brand">
+            <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
+            <div class="name">Ne<b>Mo</b><small>Neskončne Možnosti</small></div>
+          </div>
+          <p class="footer-tagline">Intuitivno dušno in energijsko branje za vaš mir.</p>
         </div>
-        <div class="contact-block">
-          <div class="l">Zakup minut / dogovor</div>
-          <div class="v"><a href="tel:031737036" data-call="031 737 036">031 737 036</a></div>
-          <div class="sub">1,30 € / min + DDV · po dogovoru</div>
-        </div>
-        <div class="contact-block">
-          <div class="l">E-pošta</div>
-          <div class="v"><a href="mailto:info@nemo.si">info@nemo.si</a></div>
-        </div>
-        <div class="contact-block">
-          <div class="l">Facebook</div>
-          <div class="v"><a href="https://www.facebook.com/neskoncnemoznosti/" target="_blank" rel="noopener">Neskončne Možnosti</a></div>
-        </div>
-        <div class="contact-block">
-          <div class="l">Naslov</div>
-          <div class="v" style="font-size:1.25rem; line-height:1.5;">Gabrovlje 9, 3210 Slovenske Konjice</div>
-        </div>
-      </div>
 
-      <div class="contact-card-back">
-        <svg class="card" viewBox="0 0 200 320" aria-hidden="true"><use href="#cardframe"/></svg>
+        <div class="footer-col">
+          <div class="footer-heading">Navigacija</div>
+          <ul class="footer-nav">
+            <li><a href="#">Domov</a></li>
+            <li><a href="o-meni.html">O meni</a></li>
+            <li><a href="storitve.html">Storitve</a></li>
+            <li><a href="#faq">Vprašanja</a></li>
+            <li><a href="zakup-minut.html">Zakup minut</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading">Kontakt</div>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <span class="fc-label">Telefonska linija</span>
+              <span><a href="tel:0906869">090 68 69</a> &nbsp;·&nbsp; <a href="tel:0907077">090 70 77</a></span>
+              <span class="fc-sub">1,69 € / min · 2,19 € / min · Telekom cenik</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="fc-label">E-pošta</span>
+              <a href="mailto:info@nemo.si">info@nemo.si</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="fc-label">Facebook</span>
+              <a href="https://www.facebook.com/neskoncnemoznosti/" target="_blank" rel="noopener">Neskončne Možnosti</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="fc-label">Naslov</span>
+              <span>Gabrovlje 9, 3210 Slovenske Konjice</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
-      <div class="name">Ne<b>Mo</b><small>Neskončne Možnosti · Zlatka Müller s.p.</small></div>
-    </div>
-    <div class="footer-legal">
-      Gabrovlje 9, 3210 Slovenske Konjice · Tel.: 031 737 036<br>
-      Mat. št.: 7147864000 · Davčna št.: 29569630 · TRR: SI56 6100 0001 5142 435<br>
-      <a href="#">Pravilnik o zasebnosti</a>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-legal">
+        <span>Zlatka Müller s.p. · Mat. št.: 7147864000 · Davčna št.: 29569630 · TRR: SI56 6100 0001 5142 435</span>
+        <a href="#">Pravilnik o zasebnosti</a>
+      </div>
     </div>
   </div>
 </footer>

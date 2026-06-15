@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaključek naročila — NeMo Vedeževanje</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='.9em' font-size='52'>✦</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<style>
+body { padding-bottom: 0; }
+.checkout-section { background: #fff; padding: 80px 0 120px; }
+.checkout-inner { max-width: 1040px; margin: 0 auto; }
+.checkout-grid-2 { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: start; }
+
+/* Section label */
+.s-label { font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A85C; margin-bottom: 14px; display: block; }
+
+/* Payment methods */
+.payment-options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
+.payment-opt {
+  display: flex; align-items: center; gap: 14px;
+  border: 1.5px solid rgba(0,0,0,0.1); border-radius: 10px; padding: 14px 18px;
+  cursor: pointer; font-family: 'Barlow', sans-serif; background: #fff;
+  transition: border-color 0.2s;
+}
+.payment-opt.active { border-color: #C9A85C; }
+.payment-opt input[type="radio"] { accent-color: #C9A85C; width: 17px; height: 17px; flex-shrink: 0; }
+.payment-opt-name { font-size: 0.95rem; font-weight: 600; color: #141414; }
+.payment-opt-sub { font-size: 0.82rem; color: rgba(0,0,0,0.45); }
+.payment-opt.disabled { opacity: 0.35; cursor: not-allowed; pointer-events: none; }
+.soon-tag { margin-left: auto; font-size: 11px; font-weight: 700; background: rgba(0,0,0,0.06); color: rgba(0,0,0,0.35); padding: 3px 10px; border-radius: 50px; letter-spacing: 0.06em; }
+
+/* Package summary */
+.bank-info { background: #F7F5F0; border: 1px solid rgba(201,168,92,0.25); border-radius: 10px; padding: 20px 24px; margin-bottom: 36px; font-family: 'Barlow', sans-serif; font-size: 0.95rem; color: rgba(0,0,0,0.5); line-height: 1.9; }
+.bank-info strong { color: #141414; }
+
+/* Info message */
+.info-msg { font-family: 'Barlow', sans-serif; font-size: 0.95rem; color: rgba(0,0,0,0.55); line-height: 1.75; margin-bottom: 36px; padding-left: 14px; border-left: 2px solid #C9A85C; }
+
+/* Form */
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.f-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.f-group label { font-family: 'Barlow', sans-serif; font-size: 0.88rem; font-weight: 500; color: rgba(0,0,0,0.55); }
+.f-group input {
+  font-family: 'Barlow', sans-serif; font-size: 1rem; color: #141414;
+  padding: 13px 16px; border: 1.5px solid rgba(0,0,0,0.12); border-radius: 10px;
+  background: #fff; outline: none; transition: border-color 0.2s;
+}
+.f-group input:focus { border-color: #C9A85C; }
+.f-group input::placeholder { color: rgba(0,0,0,0.25); }
+
+.btn-submit {
+  display: block; width: 100%; font-family: 'Barlow', sans-serif;
+  font-size: 1.1rem; font-weight: 600; padding: 16px; border-radius: 50px;
+  border: none; cursor: pointer; background: #C9A85C; color: #141414;
+  margin-top: 28px; transition: background 0.2s, transform 0.2s;
+  animation: ctaGlow 2.8s ease-in-out infinite;
+}
+.btn-submit:hover { background: #D4B870; transform: translateY(-2px); }
+.disclaimer { font-family: 'Barlow', sans-serif; font-size: 12px; color: rgba(0,0,0,0.3); text-align: center; margin-top: 12px; }
+
+/* Success */
+.success-box { display: none; text-align: center; padding: 48px 0; }
+.success-box .star { font-size: 48px; color: #C9A85C; display: block; margin-bottom: 24px; }
+.success-box h2 { color: #141414; margin-bottom: 16px; }
+.success-box p { font-family: 'Barlow', sans-serif; font-size: 1.05rem; color: rgba(0,0,0,0.6); line-height: 1.75; max-width: 440px; margin: 0 auto 28px; }
+.success-box a { font-family: 'Barlow', sans-serif; font-size: 0.95rem; color: #C9A85C; text-decoration: none; }
+
+@media (max-width: 860px) {
+  .checkout-grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .form-row-2 { grid-template-columns: 1fr; }
+}
+</style>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent','default',{'ad_storage':'denied','analytics_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <symbol id="spark" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 0 C12.8 7 17 11.2 24 12 C17 12.8 12.8 17 12 24 C11.2 17 7 12.8 0 12 C7 11.2 11.2 7 12 0 Z"/>
+  </symbol>
+  <symbol id="ic-phone" viewBox="0 0 30 30">
+    <path fill="currentColor" d="M9.32729 10.6907C11.1839 15.7555 13.1059 17.7762 17.9956 19.9286L15.8765 22.9046C10.2617 20.2165 7.46503 15.6852 6.1479 12.149L9.32729 10.6907Z"/>
+    <path fill="currentColor" d="M10.8846 3.69843C11.8773 3.69454 12.6322 4.52062 12.5645 5.45602C12.458 6.92802 12.5714 7.99005 12.8767 9.30647C13.0444 10.0296 12.665 10.764 12.0621 11.2371C11.2495 11.8747 10.6286 12.6871 10.1352 13.3865C9.45128 14.3558 7.09768 14.2862 6.57718 13.2301C5.50748 11.0599 4.78254 7.06145 6.34462 4.36005C6.58998 3.93573 7.08403 3.71329 7.59596 3.71129L10.8846 3.69843Z"/>
+    <path fill="currentColor" d="M25.9545 19.7586C26.078 18.8283 25.3004 18.0212 24.309 17.9722C22.7489 17.895 21.6461 17.661 20.2991 17.2164C19.5591 16.9722 18.7415 17.2396 18.1717 17.748C17.4037 18.4332 16.4751 18.9176 15.6806 19.2961C14.5794 19.8207 14.3695 22.0357 15.417 22.6507C17.5697 23.9146 21.6856 25.0751 24.7131 23.9355C25.1886 23.7564 25.4819 23.32 25.5455 22.8403L25.9545 19.7586Z"/>
+  </symbol>
+</svg>
+
+<nav>
+  <a href="index.html" class="brand">
+    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
+    <span class="brand-name">Ne<b>Mo</b><small>Neskončne Možnosti</small></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Domov</a></li>
+    <li><a href="o-meni.html">O meni</a></li>
+    <li><a href="storitve.html">Storitve</a></li>
+    <li><a href="index.html#faq">Vprašanja</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+    <li><a href="zakup-minut.html">Zakup minut</a></li>
+    <li class="nav-call-li"><a href="tel:0906869" class="nav-call" data-call="090 68 69"><span class="ph" aria-hidden="true"><svg viewBox="0 0 30 30"><use href="#ic-phone"/></svg></span> 090 68 69</a></li>
+  </ul>
+</nav>
+
+<header class="page-head sky">
+  <div class="narrow">
+    <h1>Zaključek naročila</h1>
+    <p>Le še korak do vašega zakupa minut.</p>
+  </div>
+</header>
+
+<section class="checkout-section">
+  <div class="container">
+    <div class="checkout-inner">
+
+      <div id="formWrap">
+        <div class="checkout-grid-2">
+
+          <!-- LEFT: Podatki plačnika -->
+          <div>
+            <span class="s-label">Podatki plačnika</span>
+            <form id="orderForm" novalidate>
+              <div class="form-row-2">
+                <div class="f-group">
+                  <label for="ime">Ime *</label>
+                  <input type="text" id="ime" placeholder="Ana" required>
+                </div>
+                <div class="f-group">
+                  <label for="priimek">Priimek *</label>
+                  <input type="text" id="priimek" placeholder="Novak" required>
+                </div>
+              </div>
+              <div class="f-group">
+                <label for="telefon">Telefon *</label>
+                <input type="tel" id="telefon" placeholder="+386 41 123 456" required>
+              </div>
+              <div class="f-group">
+                <label for="email">E-poštni naslov *</label>
+                <input type="email" id="email" placeholder="ana.novak@gmail.com" required>
+              </div>
+            </form>
+          </div>
+
+          <!-- RIGHT: Package + payment + info + submit -->
+          <div>
+            <div class="bank-info">
+              <div style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A85C; margin-bottom:12px;">Izbrani paket</div>
+              <div style="font-size:1.1rem; font-weight:600; color:#141414; margin-bottom:6px;" id="bankNaziv">—</div>
+              <div style="font-size:1.4rem; font-weight:700; color:#C9A85C; margin-bottom:2px;" id="bankZnesek">—</div>
+              <div style="font-size:0.85rem; color:rgba(0,0,0,0.4);" id="bankCena">—</div>
+            </div>
+
+            <span class="s-label">Način plačila</span>
+            <div class="payment-options">
+              <label class="payment-opt active">
+                <input type="radio" name="payment" value="nakazilo" checked>
+                <div>
+                  <div class="payment-opt-name">Nakazilo na bančni račun</div>
+                  <div class="payment-opt-sub">Varno bančno nakazilo</div>
+                </div>
+              </label>
+              <label class="payment-opt disabled">
+                <input type="radio" name="payment" value="paypal" disabled>
+                <div>
+                  <div class="payment-opt-name">PayPal</div>
+                  <div class="payment-opt-sub">Plačilo prek PayPal</div>
+                </div>
+                <span class="soon-tag">Kmalu</span>
+              </label>
+              <label class="payment-opt disabled">
+                <input type="radio" name="payment" value="card" disabled>
+                <div>
+                  <div class="payment-opt-name">Kreditna kartica</div>
+                  <div class="payment-opt-sub">Visa, Mastercard</div>
+                </div>
+                <span class="soon-tag">Kmalu</span>
+              </label>
+            </div>
+
+            <p class="info-msg">Pritisnite gumb "Naročite sedaj" in izvedite plačilo neposredno na naš račun. Podatke boste dobili na vaš e-poštni naslov. Ko bodo sredstva nakazana, vas pokličem še isti dan!</p>
+
+            <button type="submit" form="orderForm" class="btn-submit">Naročite sedaj →</button>
+            <p class="disclaimer">Vaši podatki so varni in se ne delijo s tretjimi osebami.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Success -->
+      <div class="success-box" id="successBox">
+        <span class="star">✦</span>
+        <h2>Naročilo oddano!</h2>
+        <p>Na vaš e-poštni naslov smo poslali podatke za nakazilo. Ko bodo sredstva nakazana, vas pokličem še isti dan.</p>
+        <a href="index.html">← Nazaj na domačo stran</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer id="kontakt">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
+            <div class="name">Ne<b>Mo</b><small>Neskončne Možnosti</small></div>
+          </div>
+          <p class="footer-tagline">Intuitivno dušno in energijsko branje za vaš mir.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Navigacija</div>
+          <ul class="footer-nav">
+            <li><a href="index.html">Domov</a></li>
+            <li><a href="o-meni.html">O meni</a></li>
+            <li><a href="storitve.html">Storitve</a></li>
+            <li><a href="index.html#faq">Vprašanja</a></li>
+            <li><a href="zakup-minut.html">Zakup minut</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Kontakt</div>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <span class="fc-label">Telefonska linija</span>
+              <span><a href="tel:0906869">090 68 69</a> &nbsp;·&nbsp; <a href="tel:0907077">090 70 77</a></span>
+              <span class="fc-sub">1,69 € / min · 2,19 € / min · Telekom cenik</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="fc-label">E-pošta</span>
+              <a href="mailto:info@nemo.si">info@nemo.si</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="fc-label">Facebook</span>
+              <a href="https://www.facebook.com/neskoncnemoznosti/" target="_blank" rel="noopener">Neskončne Možnosti</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="fc-label">Naslov</span>
+              <span>Gabrovlje 9, 3210 Slovenske Konjice</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-legal">
+        <span>Zlatka Müller s.p. · Mat. št.: 7147864000 · Davčna št.: 29569630 · TRR: SI56 6100 0001 5142 435</span>
+        <a href="#">Pravilnik o zasebnosti</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const naziv = params.get('naziv') || 'Branje';
+  const minutes = params.get('minutes') || '60';
+  const cena = params.get('cena') || '78';
+  const cenaDdv = params.get('cena_ddv') || '95,16';
+
+  document.getElementById('bankNaziv').textContent = naziv + ' · ' + minutes + ' minut';
+  document.getElementById('bankZnesek').textContent = cenaDdv + ' € z DDV';
+  document.getElementById('bankCena').textContent = cena + ' € + DDV';
+
+  document.querySelectorAll('.payment-opt:not(.disabled)').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelectorAll('.payment-opt').forEach(m => m.classList.remove('active'));
+      el.classList.add('active');
+    });
+  });
+
+  document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!document.getElementById('ime').value.trim() || !document.getElementById('priimek').value.trim() ||
+        !document.getElementById('telefon').value.trim() || !document.getElementById('email').value.trim()) {
+      alert('Prosimo, izpolnite vsa obvezna polja.');
+      return;
+    }
+    document.getElementById('formWrap').style.display = 'none';
+    document.getElementById('successBox').style.display = 'block';
+    dataLayer.push({ event: 'purchase', paket: naziv, cena: cena });
+  });
+
+  const nav = document.querySelector('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+</body>
+</html>
