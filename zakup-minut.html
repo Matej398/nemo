@@ -9,14 +9,14 @@
 <link rel="stylesheet" href="css/style.css">
 <style>
 .packets-section { background: #fff; padding: 100px 0; }
-.packets-intro { text-align: center; max-width: 560px; margin: 0 auto 72px; font-family: 'Barlow', sans-serif; font-size: 1.1rem; color: #666; line-height: 1.75; }
+.packets-intro { text-align: center; max-width: 780px; margin: 0 auto 72px; font-family: 'Barlow', sans-serif; font-size: 1.1rem; color: #666; line-height: 1.75; }
 .packets-intro strong { color: #141414; }
 
 .packets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
 
 .packet-card {
   border: 1px solid rgba(0,0,0,0.1); border-radius: 16px;
-  padding: 48px 36px; text-align: center;
+  padding: 32px 28px; text-align: center;
   display: flex; flex-direction: column;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -29,7 +29,7 @@
 .packet-min-label { font-family: 'Barlow', sans-serif; font-size: 14px; color: #999; letter-spacing: 0.08em; margin-top: 4px; margin-bottom: 28px; display: block; }
 
 .packet-price { font-family: 'Barlow', sans-serif; font-size: 1.35rem; font-weight: 700; color: #141414; margin-bottom: 4px; }
-.packet-vat { font-family: 'Barlow', sans-serif; font-size: 13px; color: #bbb; margin-bottom: 36px; }
+.packet-vat { font-family: 'Barlow', sans-serif; font-size: 1.35rem; font-weight: 700; color: #141414; margin-bottom: 28px; }
 
 .packet-desc { font-family: 'Barlow', sans-serif; font-size: 0.9rem; color: #888; line-height: 1.6; margin-bottom: 36px; flex: 1; }
 
@@ -41,7 +41,7 @@
 }
 .btn-zakup:hover { background: #D4B870; transform: translateY(-2px); }
 
-.compare-note { text-align: center; margin-top: 48px; font-family: 'Barlow', sans-serif; font-size: 0.9rem; color: #aaa; }
+.compare-note { text-align: center; margin-top: 48px; font-family: 'Barlow', sans-serif; font-size: 1.1rem; color: #141414; }
 .compare-note strong { color: #C9A85C; }
 
 
@@ -84,10 +84,9 @@
   </ul>
 </nav>
 
-<header class="page-head sky">
-  <div class="narrow">
+<header class="page-head sky" style="padding: 120px 0 90px; text-align: center;">
+  <div class="narrow" style="text-align: center;">
     <h1>Zakup minut</h1>
-    <p>Branje z Aurelijo po ugodnejši ceni — kličete, ko vam ustreza.</p>
   </div>
 </header>
 
@@ -102,36 +101,31 @@
 <section class="packets-section">
   <div class="container">
     <div class="packets-intro">
-      Zakupljene minute ne potečejo. Kličete, ko ste pripravljeni — minute se odštevajo samo med pogovorom. <strong>Cena: 1,30 € + DDV / min</strong>, ugodneje kot na premium liniji.
+      Minute ne potečejo — kličete, ko ste pripravljeni, odštevajo se samo med pogovorom.<br>
+      <strong>Cena: 1,30 € + DDV / min</strong> · ugodneje kot na premium liniji.
     </div>
 
     <div class="packets-grid">
 
       <div class="packet-card">
-        <span class="packet-tag">Vpogled</span>
         <div class="packet-min">30</div>
         <span class="packet-min-label">MINUT</span>
-        <div class="packet-price">39 € + DDV</div>
         <div class="packet-vat">47,58 € z DDV</div>
         <div class="packet-desc">Za eno specifično vprašanje ali kratek energijski vpogled.</div>
         <a href="zakljucek.html?naziv=Vpogled&minutes=30&cena=39&cena_ddv=47%2C58" class="btn-zakup">Zakupi minute →</a>
       </div>
 
       <div class="packet-card featured">
-        <span class="packet-tag">Branje</span>
         <div class="packet-min">60</div>
         <span class="packet-min-label">MINUT</span>
-        <div class="packet-price">78 € + DDV</div>
         <div class="packet-vat">95,16 € z DDV</div>
         <div class="packet-desc">Dovolj časa za celovito branje in več vprašanj.</div>
         <a href="zakljucek.html?naziv=Branje&minutes=60&cena=78&cena_ddv=95%2C16" class="btn-zakup">Zakupi minute →</a>
       </div>
 
       <div class="packet-card">
-        <span class="packet-tag">Poglobljeno</span>
         <div class="packet-min">120</div>
         <span class="packet-min-label">MINUT</span>
-        <div class="packet-price">156 € + DDV</div>
         <div class="packet-vat">190,32 € z DDV</div>
         <div class="packet-desc">Za poglobljeno analizo in redne kliente.</div>
         <a href="zakljucek.html?naziv=Poglobljeno&minutes=120&cena=156&cena_ddv=190%2C32" class="btn-zakup">Zakupi minute →</a>
