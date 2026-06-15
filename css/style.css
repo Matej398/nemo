@@ -336,7 +336,7 @@ nav.scrolled {
 .frame-mandala svg { width: 74%; height: auto; display: block; }
 
 /* ---------- TRUST BAND ---------- */
-#trust { background: #000000; border-top: none; padding: 26px 0; }
+#trust { background: #000000; border-top: none; padding: 26px 0; margin-top: -20px; }
 .trust-grid {
   display: flex; justify-content: center; align-items: flex-start;
   gap: clamp(36px, 9vw, 130px); flex-wrap: wrap; text-align: center;
