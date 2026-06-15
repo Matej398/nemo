@@ -426,7 +426,17 @@ details.philosophy p { font-size: 0.96rem; }
 /* ---------- KAKO DELUJE (steps) ---------- */
 #kako-deluje { overflow: hidden; padding: 140px 0; }
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 84px; }
+@keyframes stepReveal {
+  from { opacity: 0; filter: blur(16px); }
+  to   { opacity: 1; filter: blur(0); }
+}
 .step { text-align: center; }
+.step .ring { opacity: 0; }
+.steps.revealed .step .ring { animation: stepReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) forwards; }
+.steps.revealed .step:nth-child(1) .ring { animation-delay: 0s; }
+.steps.revealed .step:nth-child(2) .ring { animation-delay: 0.6s; }
+.steps.revealed .step:nth-child(3) .ring { animation-delay: 1.2s; }
+.steps.revealed .step:nth-child(4) .ring { animation-delay: 1.8s; }
 .step .ring {
   margin: 0 auto 18px;
   font-family: 'Playfair Display', serif; font-size: clamp(40px, 5vw, 60px); color: var(--lav-200);
