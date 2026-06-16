@@ -243,6 +243,11 @@ nav.scrolled {
   font-size: 9px; font-weight: 600; letter-spacing: 0.28em;
   text-transform: uppercase; color: rgba(244,237,221,0.55); margin-top: 2px;
 }
+.brand-sub {
+  display: block; font-family: 'Barlow', sans-serif;
+  font-size: 16px; font-weight: 600; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--cream);
+}
 .nav-links { display: flex; align-items: center; gap: 46px; list-style: none; }
 .nav-links a {
   font-family: 'Barlow', sans-serif; font-size: 18px; font-weight: 500;
