@@ -301,10 +301,10 @@ nav.scrolled {
   animation: spin 280s linear infinite;
 }
 .hero-inner { position: relative; z-index: 2; max-width: 840px; margin: 0 auto; }
-.mandala-float { margin-bottom: 8px; }
+.mandala-float { margin-bottom: 6px; }
 .hero-mandala {
   display: block; margin: 0 auto;
-  width: 180px; height: 180px;
+  width: 160px; height: 160px;
   opacity: 0.9;
 }
 .hero-inner h1 { margin-bottom: 8px; }
