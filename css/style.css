@@ -344,9 +344,9 @@ nav.scrolled {
 #trust { background: #000000; border-top: none; padding: 26px 0; margin-top: -20px; }
 .trust-grid {
   display: flex; justify-content: center; align-items: flex-start;
-  gap: clamp(36px, 9vw, 130px); flex-wrap: wrap; text-align: center;
+  gap: clamp(52px, 11vw, 150px); flex-wrap: wrap; text-align: center;
 }
-.trust-item .ic { width: 40px; height: 32px; color: #C9A85C; margin: 0 auto 14px; display: block; }
+.trust-item .ic { width: 34px; height: 34px; color: #C9A85C; margin: 8px auto 4px; display: block; }
 .trust-item .ic svg { width: 100%; height: 100%; display: block; }
 .trust-item .n {
   font-family: 'Playfair Display', serif; font-weight: 400; line-height: 1;
@@ -355,7 +355,7 @@ nav.scrolled {
 .trust-item .n .pct { font-size: 0.7em; }
 .trust-item .l {
   font-family: 'Barlow', sans-serif; font-size: 17px; font-weight: 600;
-  letter-spacing: 0.02em; text-transform: none; color: rgba(244,237,221,0.75); margin-top: 9px;
+  letter-spacing: 0.02em; text-transform: none; color: rgba(244,237,221,0.75); margin: 9px 0 8px;
 }
 
 /* ---------- O MENI ---------- */

@@ -1,6 +1,9 @@
 # Local Claude Code tooling (memory, plans, settings)
 .claude/
 
+# macOS
+.DS_Store
+
 # Temp screenshots / scratch
 _*.png
 _probe*.html
