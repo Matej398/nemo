@@ -526,7 +526,7 @@ footer { background: #0d0d0d; font-family: 'Barlow', sans-serif; margin-top: aut
    STORITVE SUBPAGE
    =================================================================== */
 .page-head { padding: 150px 0 104px; text-align: center; overflow: hidden; }
-.page-head h1 { margin-bottom: 42px; font-size: clamp(30px, 3.8vw, 50px); }
+.page-head h1 { margin-bottom: 42px; font-size: clamp(34px, 4.4vw, 56px); }
 .page-head.sky { background: linear-gradient(168deg, #2A2A2A 0%, #141414 58%, #0d0d0d 100%); }
 .page-head p { max-width: 600px; margin: 0 auto; color: rgba(244,237,221,0.82); font-size: 1.15rem; }
 
