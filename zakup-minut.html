@@ -28,6 +28,7 @@
 .packet-min { font-family: 'Barlow', sans-serif; font-size: clamp(30px, 3.2vw, 40px); font-weight: 600; color: #141414; line-height: 1; display: inline; }
 .packet-min-label { font-family: 'Barlow', sans-serif; font-size: clamp(30px, 3.2vw, 40px); font-weight: 600; color: #141414; display: inline; margin-left: 6px; }
 .packet-min-wrap { margin-bottom: 20px; }
+.packet-saving { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #fff; background: #C9A85C; display: inline-block; padding: 4px 12px; border-radius: 50px; margin-bottom: 16px; }
 
 .packet-price { font-family: 'Barlow', sans-serif; font-size: 1.05rem; font-weight: 600; color: #141414; margin-bottom: 4px; }
 .packet-vat { font-family: 'Barlow', sans-serif; font-size: 1.05rem; font-weight: 600; color: #141414; }
@@ -38,7 +39,7 @@
 .packet-price-val { font-family: 'Barlow', sans-serif; font-size: 1.05rem; font-weight: 600; color: #141414; }
 
 .btn-zakup {
-  display: block; font-family: 'Barlow', sans-serif; font-size: 1rem; font-weight: 600;
+  display: flex; align-items: center; justify-content: center; font-family: 'Barlow', sans-serif; font-size: 1rem; font-weight: 600;
   padding: 13px 24px; border-radius: 50px; text-decoration: none; text-align: center;
   background: #C9A85C; color: #141414;
   transition: background 0.2s, transform 0.2s;
@@ -109,33 +110,33 @@
     <div class="packets-grid">
 
       <div class="packet-card">
-        <div class="packet-min-wrap"><span class="packet-min">15</span><span class="packet-min-label">minut</span></div>
+<div class="packet-min-wrap"><span class="packet-min">15</span><span class="packet-min-label">minut</span></div>
         <div class="packet-desc">Za eno specifično vprašanje ali kratek energijski vpogled.</div>
         <div class="packet-price-row">
 
-          <span class="packet-price-val">23,79 € + DDV</span>
+          <span class="packet-price-val">23,79 € z DDV</span>
         </div>
-        <a href="zakljucek.html?naziv=Vpogled&minutes=15&cena=19%2C50&cena_ddv=23%2C79" class="btn-zakup">Zakupi minute →</a>
+        <a href="zakljucek.html?naziv=Vpogled&minutes=15&cena=19%2C50&cena_ddv=23%2C79" class="btn-zakup"><img src="img/cart.svg" style="width:22px;height:22px;margin-right:8px;"> Zakupi minute</a>
       </div>
 
       <div class="packet-card featured">
-        <div class="packet-min-wrap"><span class="packet-min">30</span><span class="packet-min-label">minut</span></div>
+<div class="packet-min-wrap"><span class="packet-min">30</span><span class="packet-min-label">minut</span></div>
         <div class="packet-desc">Dovolj časa za celovito branje in več vprašanj.</div>
         <div class="packet-price-row">
 
-          <span class="packet-price-val">47,58 € + DDV</span>
+          <span class="packet-price-val">47,58 € z DDV</span>
         </div>
-        <a href="zakljucek.html?naziv=Branje&minutes=30&cena=39&cena_ddv=47%2C58" class="btn-zakup">Zakupi minute →</a>
+        <a href="zakljucek.html?naziv=Branje&minutes=30&cena=39&cena_ddv=47%2C58" class="btn-zakup"><img src="img/cart.svg" style="width:22px;height:22px;margin-right:8px;"> Zakupi minute</a>
       </div>
 
       <div class="packet-card">
-        <div class="packet-min-wrap"><span class="packet-min">60</span><span class="packet-min-label">minut</span></div>
+<div class="packet-min-wrap"><span class="packet-min">60</span><span class="packet-min-label">minut</span></div>
         <div class="packet-desc">Za poglobljeno analizo in redne kliente.</div>
         <div class="packet-price-row">
 
-          <span class="packet-price-val">95,16 € + DDV</span>
+          <span class="packet-price-val">95,16 € z DDV</span>
         </div>
-        <a href="zakljucek.html?naziv=Poglobljeno&minutes=60&cena=78&cena_ddv=95%2C16" class="btn-zakup">Zakupi minute →</a>
+        <a href="zakljucek.html?naziv=Poglobljeno&minutes=60&cena=78&cena_ddv=95%2C16" class="btn-zakup"><img src="img/cart.svg" style="width:22px;height:22px;margin-right:8px;"> Zakupi minute</a>
       </div>
 
     </div>
