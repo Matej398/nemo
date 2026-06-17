@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pravilnik o zasebnosti — NeMo Neskončne Možnosti</title>
+<meta name="description" content="Pravilnik o zasebnosti spletne strani NeMo — Neskončne Možnosti. Informacije o piškotkih, varovanju podatkov in avtorskih pravicah.">
+<link rel="canonical" href="https://www.nemo.si/pravilnik/">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.pravilnik-section { background: #fff; padding: 80px 0 100px; }
+.pravilnik-body { max-width: 780px; margin: 0 auto; }
+.pravilnik-body h2 { font-size: clamp(22px, 2.4vw, 30px); margin: 52px 0 14px; color: var(--ink); }
+.pravilnik-body h2:first-child { margin-top: 0; }
+.pravilnik-body p { margin-bottom: 18px; color: #444; line-height: 1.85; }
+.pravilnik-body ul { margin: 0 0 18px 0; padding-left: 0; list-style: none; }
+.pravilnik-body ul li { padding: 4px 0 4px 18px; position: relative; color: #444; line-height: 1.85; }
+.pravilnik-body ul li::before { content: '–'; position: absolute; left: 0; color: var(--plum-600); }
+.pravilnik-subtitle { font-size: 1rem; color: rgba(244,237,221,0.65); margin-top: 10px; white-space: nowrap; }
+</style>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent','default',{'ad_storage':'denied','analytics_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});
+</script>
+</head>
+<body>
+
+<!-- ===== SVG SPRITE ===== -->
+<svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <path id="mpo" d="M100 8 C112 34 112 52 100 68 C88 52 88 34 100 8 Z"/>
+    <path id="mpi" d="M100 60 C107 76 107 88 100 100 C93 88 93 76 100 60 Z"/>
+    <circle id="mdot" cx="100" cy="48" r="1.7"/>
+  </defs>
+  <symbol id="mandala" viewBox="0 0 200 200">
+    <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round">
+      <circle cx="100" cy="100" r="92" opacity="0.4"/>
+      <circle cx="100" cy="100" r="78" stroke-dasharray="1.5 6" opacity="0.5"/>
+      <circle cx="100" cy="100" r="64" opacity="0.55"/>
+      <circle cx="100" cy="100" r="34" opacity="0.7"/>
+      <g opacity="0.85">
+        <use href="#mpo" transform="rotate(0 100 100)"/><use href="#mpo" transform="rotate(30 100 100)"/><use href="#mpo" transform="rotate(60 100 100)"/><use href="#mpo" transform="rotate(90 100 100)"/><use href="#mpo" transform="rotate(120 100 100)"/><use href="#mpo" transform="rotate(150 100 100)"/><use href="#mpo" transform="rotate(180 100 100)"/><use href="#mpo" transform="rotate(210 100 100)"/><use href="#mpo" transform="rotate(240 100 100)"/><use href="#mpo" transform="rotate(270 100 100)"/><use href="#mpo" transform="rotate(300 100 100)"/><use href="#mpo" transform="rotate(330 100 100)"/>
+      </g>
+      <g opacity="0.75">
+        <use href="#mpi" transform="rotate(0 100 100)"/><use href="#mpi" transform="rotate(45 100 100)"/><use href="#mpi" transform="rotate(90 100 100)"/><use href="#mpi" transform="rotate(135 100 100)"/><use href="#mpi" transform="rotate(180 100 100)"/><use href="#mpi" transform="rotate(225 100 100)"/><use href="#mpi" transform="rotate(270 100 100)"/><use href="#mpi" transform="rotate(315 100 100)"/>
+      </g>
+      <g fill="currentColor" stroke="none" opacity="0.9">
+        <use href="#mdot" transform="rotate(0 100 100)"/><use href="#mdot" transform="rotate(30 100 100)"/><use href="#mdot" transform="rotate(60 100 100)"/><use href="#mdot" transform="rotate(90 100 100)"/><use href="#mdot" transform="rotate(120 100 100)"/><use href="#mdot" transform="rotate(150 100 100)"/><use href="#mdot" transform="rotate(180 100 100)"/><use href="#mdot" transform="rotate(210 100 100)"/><use href="#mdot" transform="rotate(240 100 100)"/><use href="#mdot" transform="rotate(270 100 100)"/><use href="#mdot" transform="rotate(300 100 100)"/><use href="#mdot" transform="rotate(330 100 100)"/>
+      </g>
+      <path d="M100 84 l2.6 11.4 11.4 2.6 -11.4 2.6 -2.6 11.4 -2.6 -11.4 -11.4 -2.6 11.4 -2.6 Z" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+  <symbol id="spark" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 0 C12.8 7 17 11.2 24 12 C17 12.8 12.8 17 12 24 C11.2 17 7 12.8 0 12 C7 11.2 11.2 7 12 0 Z"/>
+  </symbol>
+  <symbol id="ic-phone" viewBox="0 0 30 30">
+    <path fill="currentColor" d="M9.32729 10.6907C11.1839 15.7555 13.1059 17.7762 17.9956 19.9286L15.8765 22.9046C10.2617 20.2165 7.46503 15.6852 6.1479 12.149L9.32729 10.6907Z"/>
+    <path fill="currentColor" d="M10.8846 3.69843C11.8773 3.69454 12.6322 4.52062 12.5645 5.45602C12.458 6.92802 12.5714 7.99005 12.8767 9.30647C13.0444 10.0296 12.665 10.764 12.0621 11.2371C11.2495 11.8747 10.6286 12.6871 10.1352 13.3865C9.45128 14.3558 7.09768 14.2862 6.57718 13.2301C5.50748 11.0599 4.78254 7.06145 6.34462 4.36005C6.58998 3.93573 7.08403 3.71329 7.59596 3.71129L10.8846 3.69843Z"/>
+    <path fill="currentColor" d="M25.9545 19.7586C26.078 18.8283 25.3004 18.0212 24.309 17.9722C22.7489 17.895 21.6461 17.661 20.2991 17.2164C19.5591 16.9722 18.7415 17.2396 18.1717 17.748C17.4037 18.4332 16.4751 18.9176 15.6806 19.2961C14.5794 19.8207 14.3695 22.0357 15.417 22.6507C17.5697 23.9146 21.6856 25.0751 24.7131 23.9355C25.1886 23.7564 25.4819 23.32 25.5455 22.8403L25.9545 19.7586Z"/>
+  </symbol>
+</svg>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="brand">
+    <img src="img/logo.png" class="mark" alt="NeMo">
+    <span class="brand-name"><span class="brand-sub">Neskončne Možnosti</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Domov</a></li>
+    <li><a href="o-meni.html">O meni</a></li>
+    <li><a href="storitve.html">Storitve</a></li>
+    <li><a href="vedezevanje.html">Vedeževanje</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="zakup-minut.html">Zakup minut</a></li>
+    <li class="nav-call-li"><a href="tel:0906869" class="nav-call" data-call="090 68 69"><span class="ph" aria-hidden="true"><svg viewBox="0 0 30 30"><use href="#ic-phone"/></svg></span> 090 68 69</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEAD -->
+<header class="page-head sky">
+  <div class="narrow">
+    <h1>Pravilnik o zasebnosti</h1>
+    <p class="pravilnik-subtitle">Spletna stran Neskončne Možnosti · Copyright © NeMo Zlatka Müller s.p.</p>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<section class="pravilnik-section">
+  <div class="container">
+    <div class="pravilnik-body">
+
+      <h2>Cilji</h2>
+      <p>Osnovni cilj spletne strani Neskončne Možnosti je, da omogoči svoboden in anonimen dostop do svoje vsebine in da pomaga napredku ljudi s pomočjo nudenja ustreznih storitev in informacij.</p>
+
+      <h2>Intelektualne pravice</h2>
+      <p>V zvezi z intelektualnimi pravicami je cilj spletne strani Neskončne Možnosti dvojen:</p>
+      <ul>
+        <li>da poskuša širiti vedenje o dejanskih človekovih potencialih, in</li>
+        <li>da ohranja celovitost dela spletne strani Neskončne Možnosti in odpravlja nejasnosti glede njenega izvora in položaja.</li>
+      </ul>
+      <p>Razen, če ni drugače omenjeno, je vso gradivo na tej spletni strani avtorsko zaščiteno in ne sme biti uporabljeno drugače kot na podlagi teh pogojev uporabe.</p>
+      <p>Gradivo spletne strani Neskončne Možnosti se lahko snema ali kopira, pod pogojem, da vse kopije ohranijo copyright in druge opombe o avtorstvu, ki jih vsebuje to gradivo. Nobenega gradiva se ne sme preoblikovati, urejati ali izvzemati iz konteksta na takšen način, da bi njegova uporaba ustvarjala napačno ali zavajajočo predstavo ali vtis glede na položaj, objavo ali delo spletne strani Neskončne Možnosti.</p>
+      <p>Naziv lastnikov avtorskih pravic ne sme biti uporabljen za oglaševanje ali reklamiranje te spletne strani in njene vsebine brez posebnega vnaprejšnjega pismenega dovoljenja. Pravica do copyrighta na dokumentih te spletne strani bo vedno ostala povezana z lastniki avtorskih pravic.</p>
+      <p>Dokumente spletne strani Neskončne Možnosti lahko na novo objavljate pod pogojem, da zagotovite informacijo, preko katere drugi uporabniki z lahkoto najdejo izvirni dokument, in da vnesete opombo o copyrightu spletne strani Neskončne Možnosti.</p>
+      <p>Dokument spletne strani Neskončne Možnosti odraža, kako je bil dokument ustvarjen ali prejet in ali je pod nadzorom urednikov ter kako se ga lahko navaja v drugih delih ali dokumentih. Vsekakor ne odobravamo in bomo ukrepali ob popačenju našega dela v zvezi z njegovim avtorstvom, opombami ali v zvezi z njegovim statusom.</p>
+      <p>Če bi radi za potrebe lastne analize opravili "veren" povzetek naših dokumentov, prosimo, da vaš citat ali navedba povzetega gradiva vključuje njegov naslov, urednika/avtorja, datum objave, URL in navedbo njegovega statusa.</p>
+      <p>Če bi radi objavili knjigo, ki vključuje nekatere od naših navedb, morate vključiti povezavo na izviren dokument na spletni strani Neskončne Možnosti, njegov status in navedbo copyrighta ter ne smete spreminjati vsebine dokumenta.</p>
+
+      <h2>Povezovanje</h2>
+      <p>Vsekakor lahko oblikujete povezave s spletno stranjo Neskončne Možnosti. Povezave so zgolj napotila na druge spletne strani. Ni vam potrebno prositi za oblikovanje povezave na našo spletno stran – ali katero koli drugo spletno stran. Vendar pa ne bi smeli nikoli narediti nič (vključno z oblikovanjem povezave), kar bi ustvarilo napačno predstavo o spletni strani, za katero oblikujete povezavo, ali nakazalo povezanost s spletno stranjo Neskončne Možnosti, ki dejansko ne obstoja.</p>
+      <p>Na primer, ne smete uporabljati zavajajočega oblikovanja, URL trikov, "hot-linkinga" ali preusmeritev, ki popačeno predstavljajo vsebino spletne strani Neskončne Možnosti tako, kot da jo objavlja nekdo drug. Zavedajte se, da je ta zahteva glede vaših predstavitev vaša obveza, kajti spletna stran Neskončne Možnosti ne podaja odpovednih izjav glede oblikovanja povezav na našo spletno stran.</p>
+      <p>Logotip na spletni strani je last spletne strani Neskončne Možnosti. Uporabniki ga ne smejo uporabiti brez predhodnega pisnega dovoljenja lastnikov spletne strani Neskončne Možnosti.</p>
+
+      <h2>Zaupnost uporabnikovih sporočil</h2>
+      <p>Razen v primeru, ko to zahteva zakon, spletna stran Neskončne Možnosti ohranja zaupnost vseh uporabnikovih sporočil, ki vsebujejo osebne uporabnikove podatke, ki so neposredno posredovani spletni strani Neskončne Možnosti.</p>
+
+      <h2>Piškotki</h2>
+      <p>Za pravilno delovanje te spletne strani se včasih na vašo napravo naložijo majhne podatkovne datoteke, imenovane piškotki. To se zgodi na večini spletnih strani.</p>
+      <p><strong>Kaj so piškotki</strong><br>Piškotek je majhna besedilna datoteka, ki jo spletna stran ob vašem obisku shrani na vašem računalniku ali mobilni napravi. Spletni strani omogoča, da si za določeno časovno obdobje zapomni vaša dejanja in prednostne nastavitve (kot so uporabniško ime ali geslo, jezik, velikost črk in druge nastavitve), zato jih pri obisku spletne strani ali brskanju po straneh ni treba vedno znova vpisovati.</p>
+      <p><strong>Kako uporabljamo piškotke</strong><br>Naše strani uporabljajo piškotke, ki si zapomnijo:</p>
+      <ul>
+        <li>vaše nastavitve, denimo barvne nastavitve ali velikost pisave,</li>
+        <li>če soglašate (ali ne) z uporabo piškotkov na tej spletni strani.</li>
+      </ul>
+      <p>Tudi nekateri videoposnetki na naših straneh uporabljajo piškotke zaradi zbiranja anonimnih statističnih podatkov o tem, kako ste prišli na našo spletno stran in katere videoposnetke ste si ogledali.</p>
+      <p>Omogočanje piškotkov ni nujno potrebno za delovanje spletne strani, vendar pripomorejo k učinkovitejšemu brskanju. Piškotke lahko izbrišete ali blokirate, vendar potem nekateri elementi spletne strani morebiti ne bodo več delovali, kot je bilo predvideno.</p>
+      <p>Informacije, ki jih zbiramo s piškotki, se ne uporabljajo za ugotavljanje istovetnosti uporabnika in podatki o brskalnih navadah so v celoti pod našim nadzorom. Ti piškotki se ne uporabljajo za druge namene, razen tistih, ki so tukaj navedeni.</p>
+      <p><strong>Nadzor nad piškotki</strong><br>Če želite, lahko ohranite nadzor nad piškotki in/ali jih zbrišete — več o tem na <a href="https://www.aboutcookies.org" target="_blank" rel="noopener">aboutcookies.org</a>. Izbrišete lahko vse piškotke, ki so že na vašem računalniku, večino brskalnikov lahko nastavite tako, da preprečijo njihovo namestitev. V tem primeru boste morda morali ročno vnesti nekatere nastavitve vsakič, ko boste obiskali spletno stran, nekatere storitve in funkcionalnosti pa mogoče ne bodo delovale.</p>
+      <p>Piškotke na spletni strani Neskončne Možnosti lahko sprejmete ali zavrnete s klikom na gumb ob prvem obisku strani.</p>
+
+      <h2>Izjava v zvezi s pravnim okvirjem</h2>
+      <p>Spletna stran Neskončne Možnosti ni pregledala nobene od spletnih strani, ki so oblikovale povezavo s spletno stranjo Neskončne Možnosti in ni odgovorna za vsebino katerekoli od teh spletnih strani. Vedite, da je katerakoli ne-Neskončne Možnosti spletna stran neodvisna od spletne strani Neskončne Možnosti in da spletna stran Neskončne Možnosti nima nadzora nad vsebino te spletne strani.</p>
+      <p>Informacija na spletni strani Neskončne Možnosti lahko vsebuje tehnične pomanjkljivosti ali tipografske napake. Informacija se lahko spreminja in posodablja brez najave. Spletna stran Neskončne Možnosti lahko kadarkoli vpelje izboljšave in/ali spremembe v zvezi z gradivom, ki ga vsebuje, ali o katerem poroča, brez predhodne najave. Spletna stran Neskončne Možnosti lahko brez najave vnese spremembe tudi v Pogoje uporabe. Uporabnik, ki ga te spremembe zavezujejo, bi moral zato občasno obiskati to stran in pregledati, kakšni so trenutni Pogoji uporabe.</p>
+
+      <h2>Omejitev odgovornosti</h2>
+      <p>V zvezi z dokumenti in slikami na spletni strani Neskončne Možnosti, spletna stran Neskončne Možnosti ne jamči, da je vsebina teh dokumentov ali slik brez napak in primerna za vsakovrstno uporabo, ali pa, da uporaba te vsebine ne bo predstavljala kršitve avtorskih pravic drugih.</p>
+      <p>V nobenem primeru spletna stran Neskončne Možnosti ne bo odgovorna za kakršnokoli naposredno ali posredno, posebno ali posledično izgubo dobička, nepremoženjsko škodo, izgubo programske opreme ali drugih podatkov na vašem sistemu, ki bi lahko nastala uporabniku zaradi obiska spletne strani Neskončne Možnosti ali zaradi nezmožnosti obiska le-te.</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="kontakt">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="img/logo.png" class="mark" alt="NeMo">
+            <div class="name"><span class="brand-sub">Neskončne Možnosti</span></div>
+          </div>
+          <p class="footer-tagline">Intuitivno dušno in energijsko branje za vaš mir.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Navigacija</div>
+          <ul class="footer-nav">
+            <li><a href="index.html">Domov</a></li>
+            <li><a href="o-meni.html">O meni</a></li>
+            <li><a href="storitve.html">Storitve</a></li>
+            <li><a href="vedezevanje.html">Vedeževanje</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="zakup-minut.html">Zakup minut</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Kontakt</div>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <span><a href="tel:0906869">090 68 69</a> &nbsp;·&nbsp; <a href="tel:0907077">090 70 77</a></span>
+              <span class="fc-sub">1,69 € / min · 2,19 € / min · Telekom cenik</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="fc-label">E-pošta</span>
+              <a href="mailto:info@nemo.si">info@nemo.si</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="fc-label">Facebook</span>
+              <a href="https://www.facebook.com/neskoncnemoznosti/" target="_blank" rel="noopener">Neskončne Možnosti</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="fc-label">Naslov</span>
+              <span>Gabrovlje 9, 3210 Slovenske Konjice</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-legal">
+        <span>Zlatka Müller s.p. · Mat. št.: 7147864000 · Davčna št.: 29569630 · TRR: SI56 6100 0001 5142 435</span>
+        <a href="pravilnik.html">Pravilnik o zasebnosti</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT -->
+<div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Piškotki">
+  <p>Za merjenje obiska uporabljamo Google Analytics (piškotki). <a href="pravilnik.html">Več o zasebnosti</a></p>
+  <div class="cookie-row">
+    <button class="c-decline" id="cookieDecline">Zavrni</button>
+    <button class="c-accept" id="cookieAccept">Sprejmi</button>
+  </div>
+</div>
+
+<script>
+  const GTM_ID = 'GTM-XXXXXXX';
+  function loadGTM(){ if(window.__gtm)return; window.__gtm=true;
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',GTM_ID);}
+  function grantConsent(){ gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'}); loadGTM(); }
+  const banner=document.getElementById('cookieBanner');
+  const choice=localStorage.getItem('nemo_consent');
+  if(choice==='granted') grantConsent();
+  else if(choice!=='denied') banner.classList.add('show');
+  document.getElementById('cookieAccept').addEventListener('click',()=>{ localStorage.setItem('nemo_consent','granted'); banner.classList.remove('show'); grantConsent(); });
+  document.getElementById('cookieDecline').addEventListener('click',()=>{ localStorage.setItem('nemo_consent','denied'); banner.classList.remove('show'); });
+  const nav=document.querySelector('nav');
+  const onScroll=()=>nav.classList.toggle('scrolled', window.scrollY>24);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+</script>
+</body>
+</html>
