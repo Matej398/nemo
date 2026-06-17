@@ -285,7 +285,8 @@ nav.scrolled {
 .callbar .btn-call { padding: 11px 26px; font-size: 0.95rem; }
 
 /* ---------- HERO ---------- */
-#hero { min-height: calc(100vh - 170px); padding: 60px 0; overflow: hidden; text-align: center; background: #141414; position: relative; display: flex; align-items: center; }
+#above-fold { height: 100vh; display: flex; flex-direction: column; }
+#hero { flex: 1; min-height: 0; padding: 60px 0; overflow: hidden; text-align: center; background: #141414; position: relative; display: flex; align-items: center; }
 .hero-video {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; object-position: center;
@@ -341,12 +342,12 @@ nav.scrolled {
 .frame-mandala svg { width: 74%; height: auto; display: block; }
 
 /* ---------- TRUST BAND ---------- */
-#trust { background: #000000; border-top: none; padding: 26px 0; margin-top: -20px; }
+#trust { background: #000000; border-top: none; padding: 16px 0; margin-top: -20px; }
 .trust-grid {
   display: flex; justify-content: center; align-items: flex-start;
   gap: clamp(52px, 11vw, 150px); flex-wrap: wrap; text-align: center;
 }
-.trust-item .ic { width: 34px; height: 34px; color: #C9A85C; margin: 8px auto 4px; display: block; }
+.trust-item .ic { width: 28px; height: 28px; color: #C9A85C; margin: 8px auto 4px; display: block; }
 .trust-item .ic svg { width: 100%; height: 100%; display: block; }
 .trust-item .n {
   font-family: 'Playfair Display', serif; font-weight: 400; line-height: 1;
@@ -585,7 +586,8 @@ footer { background: #0d0d0d; font-family: 'Barlow', sans-serif; margin-top: aut
   .hero-stage { height: 300px; }
   section, #hero, .page-head { padding-left: 0; padding-right: 0; }
   section { padding: 72px 0; }
-  #hero { min-height: auto; padding: 100px 0 70px; }
+  #above-fold { height: auto; }
+  #hero { flex: none; min-height: auto; padding: 100px 0 70px; }
   .page-head { padding: 120px 0 56px; }
   .container, .narrow { padding: 0 24px; }
   nav { padding: 0 20px; }
