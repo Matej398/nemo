@@ -15,23 +15,26 @@
 .packets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
 
 .packet-card {
-  border: 1px solid rgba(0,0,0,0.1); border-radius: 16px;
-  padding: 32px 28px; text-align: center;
+  background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 20px;
+  padding: 44px 36px 36px; text-align: center;
   display: flex; flex-direction: column;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.packet-card:hover { border-color: #C9A85C; box-shadow: 0 8px 32px rgba(201,168,92,0.12); }
+.packet-card:hover { border-color: #C9A85C; box-shadow: 0 12px 40px rgba(201,168,92,0.10); }
 .packet-card.featured { border-color: #C9A85C; }
 
 .packet-tag { font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(0,0,0,0.3); margin-bottom: 32px; display: block; }
 
-.packet-min { font-family: 'Playfair Display', serif; font-size: clamp(52px, 6vw, 72px); font-weight: 400; color: #141414; line-height: 1; }
-.packet-min-label { font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 700; color: #666; letter-spacing: 0.1em; margin-top: 4px; margin-bottom: 28px; display: block; }
+.packet-min { font-family: 'Playfair Display', serif; font-size: clamp(48px, 5.5vw, 64px); font-weight: 400; color: #141414; line-height: 1; }
+.packet-min-label { font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 600; color: #141414; margin-top: 6px; margin-bottom: 20px; display: block; }
 
-.packet-price { font-family: 'Barlow', sans-serif; font-size: 1.35rem; font-weight: 700; color: #141414; margin-bottom: 4px; }
-.packet-vat { font-family: 'Barlow', sans-serif; font-size: 1.35rem; font-weight: 700; color: #141414; margin-bottom: 28px; }
+.packet-price { font-family: 'Barlow', sans-serif; font-size: 1.05rem; font-weight: 600; color: #141414; margin-bottom: 4px; }
+.packet-vat { font-family: 'Barlow', sans-serif; font-size: 1.05rem; font-weight: 600; color: #141414; }
 
-.packet-desc { font-family: 'Barlow', sans-serif; font-size: 0.9rem; color: #888; line-height: 1.6; margin-bottom: 36px; flex: 1; }
+.packet-desc { font-family: 'Barlow', sans-serif; font-size: 1rem; color: #555; line-height: 1.75; margin-bottom: 0; flex: 1; }
+.packet-price-row { margin: 28px 0 16px; padding: 20px 0 0; border-top: 1px solid rgba(0,0,0,0.07); display: flex; justify-content: center; align-items: center; }
+.packet-price-label { font-family: 'Barlow', sans-serif; font-size: 0.95rem; color: #888; }
+.packet-price-val { font-family: 'Barlow', sans-serif; font-size: 1.05rem; font-weight: 600; color: #141414; }
 
 .btn-zakup {
   display: block; font-family: 'Barlow', sans-serif; font-size: 1rem; font-weight: 600;
@@ -101,25 +104,34 @@
 
       <div class="packet-card">
         <div class="packet-min">15</div>
-        <span class="packet-min-label">MINUT</span>
-        <div class="packet-vat">23,79 € z DDV</div>
+        <span class="packet-min-label">minut</span>
         <div class="packet-desc">Za eno specifično vprašanje ali kratek energijski vpogled.</div>
+        <div class="packet-price-row">
+
+          <span class="packet-price-val">23,79 € + DDV</span>
+        </div>
         <a href="zakljucek.html?naziv=Vpogled&minutes=15&cena=19%2C50&cena_ddv=23%2C79" class="btn-zakup">Zakupi minute →</a>
       </div>
 
       <div class="packet-card featured">
         <div class="packet-min">30</div>
-        <span class="packet-min-label">MINUT</span>
-        <div class="packet-vat">47,58 € z DDV</div>
+        <span class="packet-min-label">minut</span>
         <div class="packet-desc">Dovolj časa za celovito branje in več vprašanj.</div>
+        <div class="packet-price-row">
+
+          <span class="packet-price-val">47,58 € + DDV</span>
+        </div>
         <a href="zakljucek.html?naziv=Branje&minutes=30&cena=39&cena_ddv=47%2C58" class="btn-zakup">Zakupi minute →</a>
       </div>
 
       <div class="packet-card">
         <div class="packet-min">60</div>
-        <span class="packet-min-label">MINUT</span>
-        <div class="packet-vat">95,16 € z DDV</div>
+        <span class="packet-min-label">minut</span>
         <div class="packet-desc">Za poglobljeno analizo in redne kliente.</div>
+        <div class="packet-price-row">
+
+          <span class="packet-price-val">95,16 € + DDV</span>
+        </div>
         <a href="zakljucek.html?naziv=Poglobljeno&minutes=60&cena=78&cena_ddv=95%2C16" class="btn-zakup">Zakupi minute →</a>
       </div>
 
