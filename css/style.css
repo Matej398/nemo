@@ -255,6 +255,40 @@ nav.scrolled {
   color: #ffffff; text-decoration: none; transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--lav-200); }
+
+/* dropdown */
+.has-dropdown { position: relative; }
+.has-dropdown > a { display: flex; align-items: center; gap: 7px; cursor: pointer; }
+.dropdown-arrow {
+  width: 16px; height: 16px; opacity: 0.7; flex-shrink: 0;
+  margin-top: 3px;
+  transition: transform 0.25s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: center; background-size: contain;
+  display: inline-block;
+}
+.has-dropdown:hover .dropdown-arrow { transform: rotate(180deg); opacity: 1; }
+.dropdown {
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  padding-top: 12px; list-style: none; min-width: 210px; z-index: 100;
+}
+.dropdown::before {
+  content: ''; position: absolute; top: 12px; left: 0; right: 0; bottom: 0;
+  background: #000; border: none; border-radius: 6px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.55);
+}
+.has-dropdown:hover .dropdown { display: block; }
+.dropdown li { position: relative; }
+.dropdown li a {
+  display: block; padding: 12px 22px; position: relative; z-index: 1;
+  font-family: 'Barlow', sans-serif; font-size: 18px; font-weight: 500;
+  color: #ffffff; text-decoration: none; white-space: nowrap;
+  transition: color 0.15s, background 0.15s;
+}
+.dropdown li:first-child a { border-radius: 6px 6px 0 0; }
+.dropdown li:last-child a { border-radius: 0 0 6px 6px; }
+.dropdown li a:hover { color: var(--lav-200); background: rgba(255,255,255,0.06); }
+
 .nav-call {
   padding: 10px 22px; border-radius: 50px;
   display: inline-flex; align-items: center; gap: 8px;
@@ -525,7 +559,13 @@ footer { background: #0d0d0d; font-family: 'Barlow', sans-serif; margin-top: aut
 /* ===================================================================
    STORITVE SUBPAGE
    =================================================================== */
-.page-head { padding: 150px 0 104px; text-align: center; overflow: hidden; }
+
+.back-link { display: inline-flex; align-items: center; gap: 6px; font-family: 'Barlow', sans-serif; font-size: 1.15rem; color: #C9A85C; text-decoration: none; opacity: 0.85; transition: opacity 0.2s; }
+.back-link span { text-decoration: none; transition: text-decoration 0.2s; }
+.back-link:hover { opacity: 1; }
+.back-link:hover span { text-decoration: underline; }
+
+.page-head { padding: 120px 0 80px; text-align: center; overflow: hidden; }
 .page-head h1 { margin-bottom: 42px; font-size: clamp(34px, 4.4vw, 56px); }
 .page-head.sky { background: linear-gradient(168deg, #2A2A2A 0%, #141414 58%, #0d0d0d 100%); }
 .page-head p { max-width: 600px; margin: 0 auto; color: rgba(244,237,221,0.82); font-size: 1.15rem; }
