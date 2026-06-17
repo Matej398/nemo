@@ -14,7 +14,7 @@ body { padding-bottom: 0; background: #fff; }
 .checkout-grid-2 { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: start; }
 
 /* Section label */
-.s-label { font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A85C; margin-bottom: 14px; display: block; }
+.s-label { font-family: 'Barlow', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: 0.04em; text-transform: none; color: #C9A85C; margin-bottom: 14px; display: block; }
 
 /* Payment methods */
 .payment-options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
@@ -168,9 +168,11 @@ body { padding-bottom: 0; background: #fff; }
           <!-- RIGHT: Package + payment + info + submit -->
           <div>
             <div class="bank-info">
-              <div style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A85C; margin-bottom:12px;">Izbrani paket</div>
-              <div style="font-size:1.1rem; font-weight:600; color:#141414; margin-bottom:6px;" id="bankNaziv">—</div>
-              <div style="font-size:1.4rem; font-weight:700; color:#C9A85C; margin-bottom:2px;" id="bankZnesek">—</div>
+              <div style="font-size:22px; font-weight:600; letter-spacing:0.04em; color:#C9A85C; margin-bottom:12px;">Izbrani paket</div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div style="font-size:1.1rem; font-weight:500; color:#141414;" id="bankNaziv">—</div>
+                <div style="font-size:1.3rem; font-weight:600; color:#141414;" id="bankZnesek">—</div>
+              </div>
             </div>
 
             <span class="s-label">Način plačila</span>
@@ -278,7 +280,7 @@ body { padding-bottom: 0; background: #fff; }
   const cena = params.get('cena') || '78';
   const cenaDdv = params.get('cena_ddv') || '95,16';
 
-  document.getElementById('bankNaziv').textContent = naziv + ' · ' + minutes + ' minut';
+  document.getElementById('bankNaziv').textContent = 'Paket ' + minutes + ' minut';
   document.getElementById('bankZnesek').textContent = cenaDdv + ' € z DDV';
 
   document.querySelectorAll('.payment-opt:not(.disabled)').forEach(el => {
