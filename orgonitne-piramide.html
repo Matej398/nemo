@@ -7,6 +7,30 @@
 <meta name="description" content="Orgonitne piramide — energijska zaščita in harmonizacija prostora. NeMo Neskončne Možnosti.">
 <link rel="icon" type="image/png" href="img/logo.png">
 <link rel="stylesheet" href="css/style.css">
+<style>
+.pyramid-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 52px; }
+.pyramid-item { text-align: center; }
+.pyramid-media {
+  position: relative; width: 100%; aspect-ratio: 3/4; border-radius: 16px; overflow: hidden;
+  margin-bottom: 16px; background: linear-gradient(165deg, var(--plum-700), var(--plum-900));
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.pyramid-item:hover .pyramid-media { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(20,20,20,0.22); }
+.pyramid-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.pyramid-caption { font-size: 1.1rem; color: var(--plum-800); line-height: 1.7; }
+.pyramid-caption strong { color: #141414; }
+#o-piramidah p, #galerija .section-lead { font-size: 1.18rem; line-height: 1.85; color: var(--plum-800); }
+#o-piramidah p { margin-bottom: 18px; }
+#o-piramidah h2 { margin-bottom: 28px; }
+#galerija h2 { margin-bottom: 22px; }
+#povprasajte .btn-lav { font-size: 1.2rem; }
+@media (max-width: 940px) {
+  .pyramid-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .pyramid-grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+}
+</style>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){ dataLayer.push(arguments); }
@@ -48,13 +72,106 @@
 <header class="page-head sky">
   <div class="narrow" style="text-align: center;">
     <h1>Orgonitne piramide</h1>
-    <p style="margin-top: 20px; color: rgba(244,237,221,0.75);">Energijska zaščita in harmonizacija prostora</p>
+    <p>Energijska zaščita in harmonizacija prostora</p>
   </div>
 </header>
 
-<section style="background:#fff; padding:80px 0;">
-  <div class="container narrow">
-    <p>Vsebina strani je v pripravi. Kmalu bo na voljo več informacij o orgonitnih piramidah.</p>
+<section id="o-piramidah" style="background:#fff; padding:80px 0;">
+  <div class="container narrow" style="text-align:center; max-width:1040px;">
+    <h2>Kaj je orgonitna piramida?</h2>
+    <div class="divider-star center"><span>✦</span></div>
+    <p>Vsaka orgonitna piramida je ročno izdelana iz plasti smole, kovinskih delcev in naravnih kamnov, povezanih z bakreno tuljavo. Namen piramide je harmonizacija energije v prostoru in blaga energijska zaščita pred negativnimi vplivi okolice.</p>
+    <p>Ker pri vsaki piramidi uporabim drugačno kombinacijo kamnov in njihovo razporeditev, je vsak kos unikaten — zato cene niso enotne in jih ne navajam vnaprej. Pokličite ali pišite za ogled in osebno ponudbo.</p>
+  </div>
+</section>
+
+<section id="galerija" style="background:#fff; padding:0 0 80px;">
+  <div class="container">
+    <div style="text-align:center; max-width:680px; margin:0 auto;">
+      <h2>Galerija piramid</h2>
+      <p class="section-lead">Vsaka piramida je ročno izdelana posebej, z drugačno izbiro in razporeditvijo kamnov — zato med seboj nikoli nista popolnoma enaki.</p>
+    </div>
+    <div class="pyramid-grid">
+
+      <div class="pyramid-item">
+        <div class="pyramid-media">
+          <video class="pyramid-video" muted loop playsinline preload="none" poster="img/piramida-1.jpg">
+            <source src="img/piramida-1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="pyramid-caption"><strong>Velikost:</strong> pribl. 10 cm · <strong>Kamni:</strong> ametist, kremen</p>
+      </div>
+
+      <div class="pyramid-item">
+        <div class="pyramid-media">
+          <video class="pyramid-video" muted loop playsinline preload="none" poster="img/piramida-2.jpg">
+            <source src="img/piramida-2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="pyramid-caption"><strong>Velikost:</strong> pribl. 12 cm · <strong>Kamni:</strong> citrin, roženec</p>
+      </div>
+
+      <div class="pyramid-item">
+        <div class="pyramid-media">
+          <video class="pyramid-video" muted loop playsinline preload="none" poster="img/piramida-3.jpg">
+            <source src="img/piramida-3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="pyramid-caption"><strong>Velikost:</strong> pribl. 15 cm · <strong>Kamni:</strong> ametist, turmalin</p>
+      </div>
+
+      <div class="pyramid-item">
+        <div class="pyramid-media">
+          <video class="pyramid-video" muted loop playsinline preload="none" poster="img/piramida-4.jpg">
+            <source src="img/piramida-4.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="pyramid-caption"><strong>Velikost:</strong> pribl. 15 cm · <strong>Kamni:</strong> kremen, lapis lazuli</p>
+      </div>
+
+      <div class="pyramid-item">
+        <div class="pyramid-media">
+          <video class="pyramid-video" muted loop playsinline preload="none" poster="img/piramida-5.jpg">
+            <source src="img/piramida-5.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="pyramid-caption"><strong>Velikost:</strong> pribl. 18 cm · <strong>Kamni:</strong> citrin, ametist, kremen</p>
+      </div>
+
+      <div class="pyramid-item">
+        <div class="pyramid-media">
+          <video class="pyramid-video" muted loop playsinline preload="none" poster="img/piramida-6.jpg">
+            <source src="img/piramida-6.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="pyramid-caption"><strong>Velikost:</strong> pribl. 20 cm · <strong>Kamni:</strong> turmalin, roženec, kremen</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div style="max-width:640px;">
+      <h2>Pogosta vprašanja</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item"><h3>Zakaj cene niso navedene?</h3><p>Ker je vsaka piramida ročno izdelana z drugačno kombinacijo kamnov, je vsak kos unikaten. Cena se določi glede na uporabljene materiale — pišite mi za ponudbo.</p></div>
+      <div class="faq-item"><h3>Ali stojalo z lučko spada zraven?</h3><p>Da, vsaka piramida vključuje stojalo z vgrajeno LED lučko — topla bela ali barvno spreminjajoča, po vaši izbiri.</p></div>
+      <div class="faq-item"><h3>Kako izbrati pravo velikost?</h3><p>Velikost izberete glede na prostor, kamor bo piramida postavljena — od manjših za mizo ali polico do večjih za osrednji poudarek v prostoru. Pri izbiri vam z veseljem svetujem.</p></div>
+      <div class="faq-item"><h3>Kako poteka naročilo?</h3><p>Pošljite povpraševanje po e-pošti — skupaj izberemo velikost, kamne in lučko, nato se dogovorimo za prevzem ali dostavo.</p></div>
+      <div class="faq-item"><h3>Ali so vse piramide enake?</h3><p>Ne. Vsaka je ročno izdelana posebej, z drugačno izbiro in razporeditvijo kamnov — zato med seboj niso popolnoma identične.</p></div>
+      <div class="faq-item"><h3>Kam lahko postavim piramido?</h3><p>Kamorkoli, kjer želite mirnejšo energijo — dnevna soba, spalnica, delovni prostor ali prostor za meditacijo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="povprasajte" class="sky" style="padding:72px 0; text-align:center; background:#000;">
+  <div class="container">
+    <h2 style="font-size: clamp(30px, 3.8vw, 50px);">Vas zanima orgonitna piramida?</h2>
+    <p style="margin:16px auto 32px; max-width:520px; color:rgba(244,237,221,0.82);">Pišite mi in z veseljem vam svetujem pri izbiri kamnov ter pripravim ponudbo, prilagojeno vam in vašemu prostoru.</p>
+    <a href="mailto:info@nemo.si?subject=Povpra%C5%A1evanje%20za%20orgonitno%20piramido" class="btn-lav">Pošlji povpraševanje →</a>
   </div>
 </section>
 
@@ -117,7 +234,7 @@
 </footer>
 
 <div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Piškotki">
-  <p>Za merjenje obiska uporabljamo Google Analytics (piškotki). <a href="#">Več o zasebnosti</a></p>
+  <p>Za merjenje obiska uporabljamo Google Analytics (piškotki). <a href="piskotki.html">Več o zasebnosti</a></p>
   <div class="cookie-row">
     <button class="c-decline" id="cookieDecline">Zavrni</button>
     <button class="c-accept" id="cookieAccept">Sprejmi</button>
@@ -136,6 +253,15 @@
   else if(choice!=='denied') banner.classList.add('show');
   document.getElementById('cookieAccept').addEventListener('click',()=>{ localStorage.setItem('nemo_consent','granted'); banner.classList.remove('show'); grantConsent(); });
   document.getElementById('cookieDecline').addEventListener('click',()=>{ localStorage.setItem('nemo_consent','denied'); banner.classList.remove('show'); });
+  document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>{
+    dataLayer.push({event:'call_click', call_number:a.getAttribute('data-call'), page:'orgonitne-piramide', section:(a.closest('section')||{}).id||''});
+  }));
+  document.querySelectorAll('.pyramid-media').forEach(function(media){
+    const video = media.querySelector('.pyramid-video');
+    media.addEventListener('mouseenter', () => video.play().catch(()=>{}));
+    media.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+    media.addEventListener('touchstart', () => video.play().catch(()=>{}), {passive:true});
+  });
   const nav=document.querySelector('nav');
   const onScroll=()=>nav.classList.toggle('scrolled', window.scrollY>24);
   onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
