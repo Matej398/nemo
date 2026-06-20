@@ -6,6 +6,9 @@
 <title>Zakup minut — NeMo Vedeževanje</title>
 <meta name="description" content="Zakupite minute za intuitivno dušno branje z Aurelijo. Ugodnejša cena kot na premium liniji, brez čakanja.">
 <link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Barlow:wght@300;400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 <style>
 .packets-section { background: #fff; padding: 72px 0 100px; }
@@ -20,8 +23,9 @@
   display: flex; flex-direction: column;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
+.packet-logo { width: 52px; height: auto; margin: 0 auto 12px; display: block; filter: grayscale(100%); opacity: 0.35; transition: filter 0.3s ease, opacity 0.3s ease; }
+.packet-card:hover .packet-logo { filter: grayscale(0%); opacity: 0.9; }
 .packet-card:hover { border-color: #C9A85C; box-shadow: 0 12px 40px rgba(201,168,92,0.10); }
-.packet-card.featured { border-color: #C9A85C; }
 
 .packet-tag { font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(0,0,0,0.3); margin-bottom: 32px; display: block; }
 
@@ -46,7 +50,7 @@
 }
 .btn-zakup:hover { background: #D4B870; transform: translateY(-2px); }
 
-.compare-note { text-align: center; margin-top: 48px; font-family: 'Barlow', sans-serif; font-size: 0.95rem; color: #141414; }
+.compare-note { text-align: center; margin-top: 28px; font-family: 'Barlow', sans-serif; font-size: 0.95rem; color: #141414; }
 .compare-note strong { color: #C9A85C; }
 
 
@@ -76,8 +80,10 @@
 <nav>
   <a href="index.html" class="brand">
     <img src="img/logo.png" class="mark" alt="NeMo">
-    <span class="brand-name"><span class="brand-sub">Neskončne Možnosti</span></span>
+    <span class="brand-name"><span class="brand-sub">Neskončne Možnosti</span><span class="brand-short">NeMo</span></span>
   </a>
+  <div class="nav-right">
+  <input type="checkbox" id="navToggle" class="nav-toggle" aria-label="Meni">
   <ul class="nav-links">
     <li><a href="index.html">Domov</a></li>
     <li><a href="o-meni.html">O meni</a></li>
@@ -91,12 +97,15 @@
     </li>
     <li><a href="kontakt.html">Kontakt</a></li>
     <li><a href="zakup-minut.html">Zakup minut</a></li>
-    <li class="nav-call-li"><a href="tel:0906869" class="nav-call" data-call="090 68 69"><span class="ph" aria-hidden="true"><svg viewBox="0 0 30 30"><use href="#ic-phone"/></svg></span> 090 68 69</a></li>
   </ul>
+  <a href="tel:0906869" class="nav-call" data-call="090 68 69"><span class="ph" aria-hidden="true"><svg viewBox="0 0 30 30"><use href="#ic-phone"/></svg></span> 090 68 69</a>
+  <label for="navToggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
+  </div>
 </nav>
 
-<header class="page-head sky">
-  <div class="narrow" style="text-align: center;">
+<header class="page-head sky" style="position:relative;">
+  <div class="hero-emblem" aria-hidden="true" style="width:min(420px, 75vw); top:72%;"><img src="img/mandala2-gold.svg" alt="" style="width:100%; height:100%; display:block; opacity:0.08;"></div>
+  <div class="narrow" style="position:relative; z-index:2; text-align: center;">
     <h1>Zakup minut</h1>
   </div>
 </header>
@@ -104,13 +113,14 @@
 <section class="packets-section">
   <div class="container">
     <div class="packets-intro">
-      Minute ne potečejo — kličete, ko ste pripravljeni, odštevajo se samo med pogovorom.<br>
+      Minute ne potečejo — dogovorimo se za termin, odštevajo se samo med pogovorom.<br>
       <strong>Cena: 1,30 € + DDV / min</strong> · ugodneje kot na premium liniji.
     </div>
 
     <div class="packets-grid">
 
       <div class="packet-card">
+<img src="img/logo.png" class="packet-logo" alt="">
 <div class="packet-min-wrap"><span class="packet-min">15</span><span class="packet-min-label">minut</span></div>
         <div class="packet-desc">Za eno specifično vprašanje ali kratek energijski vpogled.</div>
         <div class="packet-price-row">
@@ -121,6 +131,7 @@
       </div>
 
       <div class="packet-card featured">
+<img src="img/logo.png" class="packet-logo" alt="">
 <div class="packet-min-wrap"><span class="packet-min">30</span><span class="packet-min-label">minut</span></div>
         <div class="packet-desc">Dovolj časa za celovito branje in več vprašanj.</div>
         <div class="packet-price-row">
@@ -131,6 +142,7 @@
       </div>
 
       <div class="packet-card">
+<img src="img/logo.png" class="packet-logo" alt="">
 <div class="packet-min-wrap"><span class="packet-min">60</span><span class="packet-min-label">minut</span></div>
         <div class="packet-desc">Za poglobljeno analizo in redne kliente.</div>
         <div class="packet-price-row">
@@ -167,7 +179,7 @@
         <div class="footer-col">
           <div class="footer-brand">
             <img src="img/logo.png" class="mark" alt="NeMo">
-            <div class="name"><span class="brand-sub">Neskončne Možnosti</span></div>
+            <div class="name"><span class="brand-sub">Neskončne Možnosti</span><span class="brand-short">NeMo</span></div>
           </div>
           <p class="footer-tagline">Intuitivno dušno in energijsko branje za vaš mir.</p>
         </div>

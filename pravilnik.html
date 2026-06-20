@@ -7,6 +7,9 @@
 <meta name="description" content="Pravilnik o zasebnosti spletne strani NeMo — Neskončne Možnosti. Informacije o piškotkih, varovanju podatkov in avtorskih pravicah.">
 <link rel="canonical" href="https://www.nemo.si/pravilnik/">
 <link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Barlow:wght@300;400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 <style>
 .pravilnik-section { background: #fff; padding: 80px 0 100px; }
@@ -66,8 +69,10 @@
 <nav>
   <a href="index.html" class="brand">
     <img src="img/logo.png" class="mark" alt="NeMo">
-    <span class="brand-name"><span class="brand-sub">Neskončne Možnosti</span></span>
+    <span class="brand-name"><span class="brand-sub">Neskončne Možnosti</span><span class="brand-short">NeMo</span></span>
   </a>
+  <div class="nav-right">
+  <input type="checkbox" id="navToggle" class="nav-toggle" aria-label="Meni">
   <ul class="nav-links">
     <li><a href="index.html">Domov</a></li>
     <li><a href="o-meni.html">O meni</a></li>
@@ -81,13 +86,16 @@
     </li>
     <li><a href="kontakt.html">Kontakt</a></li>
     <li><a href="zakup-minut.html">Zakup minut</a></li>
-    <li class="nav-call-li"><a href="tel:0906869" class="nav-call" data-call="090 68 69"><span class="ph" aria-hidden="true"><svg viewBox="0 0 30 30"><use href="#ic-phone"/></svg></span> 090 68 69</a></li>
   </ul>
+  <a href="tel:0906869" class="nav-call" data-call="090 68 69"><span class="ph" aria-hidden="true"><svg viewBox="0 0 30 30"><use href="#ic-phone"/></svg></span> 090 68 69</a>
+  <label for="navToggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
+  </div>
 </nav>
 
 <!-- PAGE HEAD -->
-<header class="page-head sky">
-  <div class="narrow">
+<header class="page-head sky" style="position:relative;">
+  <div class="hero-emblem" aria-hidden="true" style="width:min(420px, 75vw); top:72%;"><img src="img/mandala2-gold.svg" alt="" style="width:100%; height:100%; display:block; opacity:0.08;"></div>
+  <div class="narrow" style="position:relative; z-index:2;">
     <h1>Pravilnik o zasebnosti</h1>
     <p class="pravilnik-subtitle">Spletna stran Neskončne Možnosti · Copyright © NeMo Zlatka Müller s.p.</p>
   </div>
@@ -157,7 +165,7 @@
         <div class="footer-col">
           <div class="footer-brand">
             <img src="img/logo.png" class="mark" alt="NeMo">
-            <div class="name"><span class="brand-sub">Neskončne Možnosti</span></div>
+            <div class="name"><span class="brand-sub">Neskončne Možnosti</span><span class="brand-short">NeMo</span></div>
           </div>
           <p class="footer-tagline">Intuitivno dušno in energijsko branje za vaš mir.</p>
         </div>

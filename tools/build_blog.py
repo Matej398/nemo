@@ -186,6 +186,9 @@ ARTICLE_TMPL = """<!DOCTYPE html>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="https://www.nemo.si/clanki/{stem}.html">
 <link rel="icon" type="image/png" href="../img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Barlow:wght@300;400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="../css/style.css">
 {head_consent}
 </head>
@@ -281,6 +284,9 @@ idx = f"""<!DOCTYPE html>
 <meta name="description" content="Članki o jasnovidnosti, energijskem branju, duhovnosti in osebnem razvoju. NeMo Neskončne Možnosti.">
 <link rel="canonical" href="https://www.nemo.si/clanki.html">
 <link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Barlow:wght@300;400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 {HEAD_CONSENT}
 </head>
@@ -290,8 +296,9 @@ idx = f"""<!DOCTYPE html>
 
 {NAV}
 
-<header class="page-head sky">
-  <div class="narrow" style="text-align: center;">
+<header class="page-head sky" style="position:relative;">
+  <div class="hero-emblem" aria-hidden="true" style="width:min(420px, 75vw); top:72%;"><img src="img/mandala2-gold.svg" alt="" style="width:100%; height:100%; display:block; opacity:0.08;"></div>
+  <div class="narrow" style="position:relative; z-index:2; text-align: center;">
     <h1>Članki</h1>
     <p>Misli, vpogledi in zapisi o jasnovidnosti, energiji, duhovnem svetu in vsakdanjem življenju.</p>
   </div>

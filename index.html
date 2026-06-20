@@ -17,6 +17,9 @@
 <meta property="og:image" content="https://www.nemo.si/img/aurelija-og.jpg">
 
 <link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Barlow:wght@300;400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 
 <script>
@@ -161,8 +164,10 @@
 <nav>
   <a href="#hero" class="brand">
     <img src="img/logo.png" class="mark" alt="NeMo">
-    <span class="brand-name"><span class="brand-sub">Neskončne Možnosti</span></span>
+    <span class="brand-name"><span class="brand-sub">Neskončne Možnosti</span><span class="brand-short">NeMo</span></span>
   </a>
+  <div class="nav-right">
+  <input type="checkbox" id="navToggle" class="nav-toggle" aria-label="Meni">
   <ul class="nav-links">
     <li><a href="#">Domov</a></li>
     <li><a href="o-meni.html">O meni</a></li>
@@ -176,8 +181,10 @@
     </li>
     <li><a href="kontakt.html">Kontakt</a></li>
     <li><a href="zakup-minut.html">Zakup minut</a></li>
-    <li class="nav-call-li"><a href="tel:0906869" class="nav-call" data-call="090 68 69"><span class="ph" aria-hidden="true"><svg viewBox="0 0 30 30"><use href="#ic-phone"/></svg></span> 090 68 69</a></li>
   </ul>
+  <a href="tel:0906869" class="nav-call" data-call="090 68 69"><span class="ph" aria-hidden="true"><svg viewBox="0 0 30 30"><use href="#ic-phone"/></svg></span> 090 68 69</a>
+  <label for="navToggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
+  </div>
 </nav>
 
 <!-- ABOVE FOLD WRAPPER: hero + trust = exactly 100vh -->
@@ -186,11 +193,11 @@
 <!-- HERO -->
 <section id="hero" class="sky">
 <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
-  <source src="img/hero.mp4" type="video/mp4">
+  <source src="img/hero.webm" type="video/webm">
 </video>
 <script>
   (function(){
-    var videos = ['img/hero.mp4','img/hero2.mp4'];
+    var videos = ['img/hero.webm','img/hero2.webm'];
     var v = document.getElementById('heroVideo');
     var src = videos[Math.random() < 0.5 ? 0 : 1];
     v.querySelector('source').src = src;
@@ -206,9 +213,9 @@
       <div class="hero-status"><span class="dot"></span> Aurelija je prosta. Pokličite zdaj:</div>
       <div>
         <a href="tel:0906869" class="btn-lav" data-call="090 68 69"><span class="ico" aria-hidden="true"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9.32729 10.6907C11.1839 15.7555 13.1059 17.7762 17.9956 19.9286L15.8765 22.9046C10.2617 20.2165 7.46503 15.6852 6.1479 12.149L9.32729 10.6907Z" fill="#0F1730"/>
-          <path d="M10.8846 3.69843C11.8773 3.69454 12.6322 4.52062 12.5645 5.45602C12.458 6.92802 12.5714 7.99005 12.8767 9.30647C13.0444 10.0296 12.665 10.764 12.0621 11.2371C11.2495 11.8747 10.6286 12.6871 10.1352 13.3865C9.45128 14.3558 7.09768 14.2862 6.57718 13.2301C5.50748 11.0599 4.78254 7.06145 6.34462 4.36005C6.58998 3.93573 7.08403 3.71329 7.59596 3.71129L10.8846 3.69843Z" fill="#0F1730"/>
-          <path d="M25.9545 19.7586C26.078 18.8283 25.3004 18.0212 24.309 17.9722C22.7489 17.895 21.6461 17.661 20.2991 17.2164C19.5591 16.9722 18.7415 17.2396 18.1717 17.748C17.4037 18.4332 16.4751 18.9176 15.6806 19.2961C14.5794 19.8207 14.3695 22.0357 15.417 22.6507C17.5697 23.9146 21.6856 25.0751 24.7131 23.9355C25.1886 23.7564 25.4819 23.32 25.5455 22.8403L25.9545 19.7586Z" fill="#0F1730"/>
+          <path d="M9.32729 10.6907C11.1839 15.7555 13.1059 17.7762 17.9956 19.9286L15.8765 22.9046C10.2617 20.2165 7.46503 15.6852 6.1479 12.149L9.32729 10.6907Z" fill="#ffffff"/>
+          <path d="M10.8846 3.69843C11.8773 3.69454 12.6322 4.52062 12.5645 5.45602C12.458 6.92802 12.5714 7.99005 12.8767 9.30647C13.0444 10.0296 12.665 10.764 12.0621 11.2371C11.2495 11.8747 10.6286 12.6871 10.1352 13.3865C9.45128 14.3558 7.09768 14.2862 6.57718 13.2301C5.50748 11.0599 4.78254 7.06145 6.34462 4.36005C6.58998 3.93573 7.08403 3.71329 7.59596 3.71129L10.8846 3.69843Z" fill="#ffffff"/>
+          <path d="M25.9545 19.7586C26.078 18.8283 25.3004 18.0212 24.309 17.9722C22.7489 17.895 21.6461 17.661 20.2991 17.2164C19.5591 16.9722 18.7415 17.2396 18.1717 17.748C17.4037 18.4332 16.4751 18.9176 15.6806 19.2961C14.5794 19.8207 14.3695 22.0357 15.417 22.6507C17.5697 23.9146 21.6856 25.0751 24.7131 23.9355C25.1886 23.7564 25.4819 23.32 25.5455 22.8403L25.9545 19.7586Z" fill="#ffffff"/>
         </svg></span> Pokličite 090 68 69</a>
       </div>
       <p class="hero-price">1,69 € / min · Telekom cenik</p>
@@ -289,16 +296,24 @@
         <h2>Storitve in cenik</h2>
         <p class="lead">Vedeževanje in prognoza s tarot ali ciganskimi kartami, nihalo, branje energijskega polja in razlaga sanj — po telefonu ali osebno.</p>
         <ul class="teaser-list">
-          <li>Telefonsko branje <span class="price">1,69 € / min</span></li>
+          <li>Telefonsko branje <span class="price"><span class="phone-num">090 68 69</span> · 1,69 € / min · <span class="phone-num">090 70 77</span> · 2,19 € / min</span></li>
           <li>Časovni zakup minut <span class="price">1,30 € / min</span></li>
           <li>Živo branje (osebno) <span class="price">Po dogovoru</span></li>
         </ul>
         <a href="storitve.html" class="btn-ghost on-light">Oglejte si vse storitve →</a>
       </div>
       <div class="teaser-card">
-        <svg class="mark" viewBox="0 0 14 14" aria-hidden="true"><use href="#ic-zakup"/></svg>
-        <h3>Branje brez čakanja</h3>
-        <p class="teaser-card-p">Intuitivno dušno in energijsko branje v poljubnem trajanju na podlagi vnaprej zakupljenega časa.</p>
+        <span class="teaser-badge">Prihranite do 28 %</span>
+        <h3>Cenejše vedeževanje</h3>
+        <div class="teaser-price">
+          <span class="tp-now">1,30 €<small>/min</small></span>
+          <span class="tp-old">1,69 €/min</span>
+        </div>
+        <ul class="teaser-perks">
+          <li>Termin po dogovoru, brez vezave</li>
+          <li>Minute nikoli ne potečejo</li>
+          <li>Ugodneje kot premium linija</li>
+        </ul>
         <a href="zakup-minut.html" class="btn-call">Zakup minut →</a>
       </div>
     </div>
@@ -331,7 +346,7 @@
         <div class="footer-col">
           <div class="footer-brand">
             <img src="img/logo.png" class="mark" alt="NeMo">
-            <div class="name"><span class="brand-sub">Neskončne Možnosti</span></div>
+            <div class="name"><span class="brand-sub">Neskončne Možnosti</span><span class="brand-short">NeMo</span></div>
           </div>
           <p class="footer-tagline">Intuitivno dušno in energijsko branje za vaš mir.</p>
         </div>
